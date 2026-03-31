@@ -15,9 +15,7 @@ async function handleLogin(e) {
   const hash = await hashPassword(input);
   if (hash === PASSWORD_HASH) {
     sessionStorage.setItem('authenticated', 'true');
-    document.getElementById('login-screen').classList.add('hidden');
-    document.getElementById('app').classList.remove('hidden');
-    initApp();
+    showApp();
   } else {
     document.getElementById('login-error').classList.remove('hidden');
     document.getElementById('password-input').value = '';
@@ -25,11 +23,15 @@ async function handleLogin(e) {
   }
 }
 
+function showApp() {
+  document.getElementById('login-screen').classList.add('hidden');
+  document.getElementById('app').classList.remove('hidden');
+  initApp();
+}
+
 function checkAuth() {
   if (sessionStorage.getItem('authenticated') === 'true') {
-    document.getElementById('login-screen').classList.add('hidden');
-    document.getElementById('app').classList.remove('hidden');
-    initApp();
+    showApp();
   } else {
     document.getElementById('login-form').addEventListener('submit', handleLogin);
   }
@@ -41,8 +43,8 @@ const TOTAL_DAYS = 30;
 function initApp() {
   const savedDay = parseInt(localStorage.getItem('currentDay') || '1', 10);
   currentDay = Math.min(Math.max(savedDay, 1), TOTAL_DAYS);
-  loadLesson(currentDay);
   setupTabs();
+  loadLesson(currentDay);
 }
 
 function setupTabs() {
@@ -60,24 +62,33 @@ function setupTabs() {
 async function loadLesson(day) {
   try {
     const response = await fetch(`lessons/day-${day}.json`);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const lesson = await response.json();
     renderLesson(lesson, day);
   } catch (err) {
     console.error('Failed to load lesson:', err);
+    const lessonTitle = document.getElementById('lesson-title');
+    if (lessonTitle) lessonTitle.textContent = `Error loading Day ${day}. Please refresh.`;
   }
 }
 
+function el(id) {
+  return document.getElementById(id);
+}
+
 function renderLesson(lesson, day) {
-  document.getElementById('current-day').textContent = day;
-  document.getElementById('nav-day').textContent = day;
-  document.getElementById('lesson-title').textContent = `Day ${day}: ${lesson.title}`;
+  if (!el('current-day')) return;
+
+  el('current-day').textContent = day;
+  el('nav-day').textContent = day;
+  el('lesson-title').textContent = `Day ${day}: ${lesson.title}`;
   const pct = (day / TOTAL_DAYS) * 100;
-  document.getElementById('progress-bar').style.width = pct + '%';
+  el('progress-bar').style.width = pct + '%';
   document.querySelector('.day-badge').textContent = `Day ${day} of ${TOTAL_DAYS}`;
 
   // Warm-Up
-  document.getElementById('warmup-title').textContent = lesson.warmup.title;
-  const grid = document.getElementById('warmup-words');
+  el('warmup-title').textContent = lesson.warmup.title;
+  const grid = el('warmup-words');
   grid.innerHTML = lesson.warmup.words.map(w => `
     <div class="vocab-card">
       <div class="vocab-word">${w.word}</div>
@@ -87,8 +98,8 @@ function renderLesson(lesson, day) {
   `).join('');
 
   // Speaking
-  document.getElementById('speaking-title').textContent = lesson.speaking.title;
-  document.getElementById('speaking-content').innerHTML = `
+  el('speaking-title').textContent = lesson.speaking.title;
+  el('speaking-content').innerHTML = `
     <div class="speaking-card">
       <div class="scenario-badge">📍 ${lesson.speaking.scenario}</div>
       <div class="speaking-context">${lesson.speaking.context}</div>
@@ -99,7 +110,7 @@ function renderLesson(lesson, day) {
   `;
 
   // Reading
-  document.getElementById('reading-title').textContent = lesson.reading.title;
+  el('reading-title').textContent = lesson.reading.title;
   const questionsHTML = lesson.reading.questions.map((q, i) => `
     <div class="question-item">
       <div class="question-text">${i + 1}. ${q}</div>
@@ -113,7 +124,7 @@ function renderLesson(lesson, day) {
       <span class="key-phrase-meaning">${kp.meaning}</span>
     </div>
   `).join('');
-  document.getElementById('reading-content').innerHTML = `
+  el('reading-content').innerHTML = `
     <div class="reading-passage">${lesson.reading.passage}</div>
     <div class="reading-questions">
       <h4>📝 Comprehension Questions:</h4>
@@ -126,8 +137,8 @@ function renderLesson(lesson, day) {
   `;
 
   // Phrases
-  document.getElementById('phrases-title').textContent = lesson.phrases.title;
-  document.getElementById('phrases-content').innerHTML = lesson.phrases.items.map(p => `
+  el('phrases-title').textContent = lesson.phrases.title;
+  el('phrases-content').innerHTML = lesson.phrases.items.map(p => `
     <div class="phrase-item">
       <div>
         <div class="phrase-context">${p.context}</div>
@@ -138,8 +149,8 @@ function renderLesson(lesson, day) {
     </div>
   `).join('');
 
-  document.getElementById('prev-btn').disabled = day <= 1;
-  document.getElementById('next-btn').disabled = day >= TOTAL_DAYS;
+  el('prev-btn').disabled = day <= 1;
+  el('next-btn').disabled = day >= TOTAL_DAYS;
 }
 
 function toggleAnswer(btn) {
