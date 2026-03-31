@@ -1,4 +1,4 @@
-// SHA-256 hash of "benny123" - never store plain text password
+// SHA-256 hash of the login password (never store plain text)
 const PASSWORD_HASH = '3fe289d7d1bf66596b7ccc72dd8b03bd664c7ae74f9090979638f12a8c0daa31';
 
 async function hashPassword(password) {

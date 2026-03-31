@@ -14,7 +14,7 @@
   "speaking": {
     "title": "💬 Speaking — Explaining a Technical Concept",
     "scenario": "Explaining REST APIs to a New Team Member",
-    "context": "A new team member named Wulan just joined. She has a design background and is transitioning to front-end development. She asked you: 'I keep seeing "API" in the tickets — what exactly is a REST API and why do we use it?' You need to explain it clearly without overwhelming her with technical jargon.",
+    "context": "A new team member named Wulan just joined. She has a design background and is transitioning to front-end development. She asked you: 'I keep seeing API in the tickets — what exactly is a REST API and why do we use it?' You need to explain it clearly without overwhelming her with technical jargon.",
     "prompt": "Explain what a REST API is to Wulan using simple language and an analogy. Make it practical and relatable.",
     "sample_answer": "Great question! Think of an API like a waiter at a restaurant. You are the customer (the frontend), the kitchen is the server where all the data lives, and the waiter is the API. You don't go into the kitchen yourself — you tell the waiter what you want, the waiter goes to the kitchen and brings back what you ordered. A REST API is a specific style of waiter that speaks in a standard language using URLs and HTTP methods. For example, to get a list of users, you send a GET request to /api/users. To create a new user, you send a POST request. The server responds with data in JSON format, which looks like a structured list of key-value pairs. We use REST APIs because it separates the frontend from the backend — you and I can work on them independently, and we just agree on the API contract between us. Does that make sense?"
   },

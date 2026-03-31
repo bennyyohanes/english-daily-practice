@@ -5,6 +5,7 @@ const path = require('path');
 const resend = new Resend(process.env.RESEND_API_KEY);
 const EMAIL_TO = process.env.EMAIL_TO || 'bennyyohanes5@gmail.com';
 const SITE_URL = 'https://bennyyohanes.github.io/english-daily-practice/';
+const MAX_PASSAGE_LENGTH = 400;
 
 function getDayNumber() {
   // Day 1 = Jan 1, 2025. Cycle every 30 days.
@@ -79,7 +80,7 @@ async function main() {
       <!-- Reading -->
       <div style="background: #161B22; border: 1px solid #30363D; border-radius: 12px; padding: 24px; margin-bottom: 20px;">
         <h3 style="color: #E6EDF3; margin: 0 0 12px;">📖 ${lesson.reading.title}</h3>
-        <div style="background: #1C2128; border-left: 3px solid #00D4FF; border-radius: 8px; padding: 16px; font-family: 'Courier New', monospace; font-size: 13px; color: #8B949E; white-space: pre-wrap; line-height: 1.7;">${lesson.reading.passage.substring(0, 400)}${lesson.reading.passage.length > 400 ? '...' : ''}</div>
+        <div style="background: #1C2128; border-left: 3px solid #00D4FF; border-radius: 8px; padding: 16px; font-family: 'Courier New', monospace; font-size: 13px; color: #8B949E; white-space: pre-wrap; line-height: 1.7;">${lesson.reading.passage.substring(0, MAX_PASSAGE_LENGTH)}${lesson.reading.passage.length > MAX_PASSAGE_LENGTH ? '...' : ''}</div>
       </div>
 
       <!-- Phrases -->
