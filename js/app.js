@@ -40,21 +40,26 @@ function checkAuth() {
 let currentDay = 1;
 const TOTAL_DAYS = 30;
 
-// Day 1 = 01-04-2026
-const START_DATE = new Date(2026, 3, 1); // April 1, 2026
+function getDayFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const day = parseInt(params.get('day'), 10);
+  return isNaN(day) ? null : Math.min(Math.max(day, 1), TOTAL_DAYS);
+}
 
-function getDayDate(day) {
-  const d = new Date(START_DATE);
-  d.setDate(START_DATE.getDate() + (day - 1));
-  const dd = String(d.getDate()).padStart(2, '0');
-  const mm = String(d.getMonth() + 1).padStart(2, '0');
-  const yyyy = d.getFullYear();
-  return `${dd}-${mm}-${yyyy}`;
+function setDayInUrl(day) {
+  const url = new URL(window.location.href);
+  url.searchParams.set('day', day);
+  window.history.pushState({}, '', url);
 }
 
 function initApp() {
-  const savedDay = parseInt(localStorage.getItem('currentDay') || '1', 10);
-  currentDay = Math.min(Math.max(savedDay, 1), TOTAL_DAYS);
+  const urlDay = getDayFromUrl();
+  if (urlDay) {
+    currentDay = urlDay;
+  } else {
+    const savedDay = parseInt(localStorage.getItem('currentDay') || '1', 10);
+    currentDay = Math.min(Math.max(savedDay, 1), TOTAL_DAYS);
+  }
   setupTabs();
   loadLesson(currentDay);
 }
@@ -92,7 +97,7 @@ function renderLesson(lesson, day) {
   if (!el('current-day')) return;
 
   el('current-day').textContent = day;
-  el('nav-day').textContent = getDayDate(day);
+  el('nav-day').textContent = day;
   el('lesson-title').textContent = `Day ${day}: ${lesson.title}`;
   const pct = (day / TOTAL_DAYS) * 100;
   el('progress-bar').style.width = pct + '%';
@@ -161,13 +166,8 @@ function renderLesson(lesson, day) {
     </div>
   `).join('');
 
-  // Update nav buttons with dates
-  const prevBtn = el('prev-btn');
-  const nextBtn = el('next-btn');
-  prevBtn.disabled = day <= 1;
-  nextBtn.disabled = day >= TOTAL_DAYS;
-  prevBtn.textContent = day > 1 ? `← ${getDayDate(day - 1)}` : '← Previous Day';
-  nextBtn.textContent = day < TOTAL_DAYS ? `${getDayDate(day + 1)} →` : 'Next Day →';
+  el('prev-btn').disabled = day <= 1;
+  el('next-btn').disabled = day >= TOTAL_DAYS;
 }
 
 function toggleAnswer(btn) {
@@ -203,6 +203,7 @@ function navigate(dir) {
   if (newDay < 1 || newDay > TOTAL_DAYS) return;
   currentDay = newDay;
   localStorage.setItem('currentDay', currentDay);
+  setDayInUrl(currentDay);
   // Reset to warmup tab
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.tab-pane').forEach(p => p.classList.add('hidden'));
@@ -210,6 +211,20 @@ function navigate(dir) {
   document.getElementById('tab-warmup').classList.remove('hidden');
   loadLesson(currentDay);
 }
+
+// Handle browser back/forward navigation
+window.addEventListener('popstate', () => {
+  const urlDay = getDayFromUrl();
+  if (urlDay && urlDay !== currentDay) {
+    currentDay = urlDay;
+    localStorage.setItem('currentDay', currentDay);
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.add('hidden'));
+    document.querySelector('[data-tab="warmup"]').classList.add('active');
+    document.getElementById('tab-warmup').classList.remove('hidden');
+    loadLesson(currentDay);
+  }
+});
 
 // Init
 checkAuth();
