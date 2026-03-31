@@ -1,0 +1,46 @@
+{
+  "day": 24,
+  "title": "API Design Conversations",
+  "warmup": {
+    "title": "🔥 API Design Vocabulary — Day 24",
+    "words": [
+      { "word": "RESTful", "meaning": "Following the REST architectural style for designing APIs", "example": "Our backend follows RESTful conventions — resources are addressed by URLs." },
+      { "word": "pagination", "meaning": "Dividing large result sets into pages to improve performance", "example": "The API uses cursor-based pagination to efficiently handle large datasets." },
+      { "word": "versioning", "meaning": "Maintaining multiple versions of an API to avoid breaking existing clients", "example": "We use URL versioning — /api/v1 and /api/v2 run simultaneously." },
+      { "word": "idempotent", "meaning": "An operation that produces the same result no matter how many times it is called", "example": "PUT requests should be idempotent — calling it twice should not create two records." },
+      { "word": "rate limiting", "meaning": "Restricting the number of API requests a client can make in a time period", "example": "We apply rate limiting to prevent abuse — 100 requests per minute per user." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Discussing API Design with a Frontend Developer",
+    "scenario": "API Design Discussion",
+    "context": "You are designing a new API for the product catalog. Your frontend colleague Eko has some requests: (1) he wants a single endpoint that returns all products with full details to avoid multiple calls. (2) He wants the API to also return the inventory count embedded in the product object. You think approach 1 is problematic for performance, but approach 2 is reasonable.",
+    "prompt": "Discuss the API design with Eko. Agree with his second request but explain the concern with the first and propose a better solution.",
+    "sample_answer": "Thanks for sharing your needs, Eko — that's really helpful context! I want to make sure the API works well for both of us. On your second request — embedding inventory count in the product object — I think that makes total sense. It avoids an extra API call and the inventory is always relevant when displaying a product. I'll include it. On the first request — returning all products with full details in one call — I have a concern. We have over 50,000 products. If we return everything at once, the response could be several megabytes, which will be slow on mobile connections and put heavy load on the server. Could we use pagination instead? I'll give you a pageSize parameter — you could request 50 products at a time, which should be fast and practical. If you need to search or filter, I can add query parameters for that too. Would that work for the use case you have in mind?"
+  },
+  "reading": {
+    "title": "📖 Reading — Principles of Good API Design",
+    "passage": "A good API is like a good tool — it is intuitive, reliable, and does not surprise you. A bad API is a constant source of frustration for the developers who use it.\n\nGood API design follows consistent conventions. Use plural nouns for resource names (/users, not /user or /getUser). Use HTTP methods correctly: GET to read, POST to create, PUT/PATCH to update, DELETE to delete. Return appropriate HTTP status codes: 201 for created, 404 for not found, 422 for validation errors.\n\nDesign for your consumers. Before writing a single line of backend code, ask your frontend or mobile developers what data they need and in what format. An API that is perfectly designed from a backend perspective but forces the frontend to make 10 calls to render one screen is a bad API.\n\nVersion your API from day one. Even if you never think you will break a contract, you will eventually. Having /api/v1 from the start means you can deploy /api/v2 without affecting existing clients.\n\nDocument your error responses as thoroughly as your success responses. A well-documented error structure is one of the most user-friendly things you can do for developers integrating with your API.",
+    "questions": [
+      "What HTTP methods should be used for reading, creating, and deleting resources?",
+      "Why should you design an API by talking to frontend developers first?"
+    ],
+    "answers": [
+      "GET for reading, POST for creating, PUT/PATCH for updating, DELETE for deleting.",
+      "To understand exactly what data they need and in what format — an API that forces multiple calls for one screen is a bad API."
+    ],
+    "key_phrases": [
+      { "phrase": "I have a concern about this approach — here's why", "meaning": "Saya punya kekhawatiran tentang pendekatan ini — ini alasannya" },
+      { "phrase": "Could we use pagination instead of returning everything at once?", "meaning": "Bisakah kita menggunakan pagination daripada mengembalikan semuanya sekaligus?" },
+      { "phrase": "Would that work for your use case?", "meaning": "Apakah itu cocok untuk kasus penggunaan kamu?" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ API Design Discussion Phrases",
+    "items": [
+      { "context": "Agreeing with a requirement", "phrase": "That makes sense — I'll include that field in the response object.", "indonesian": "Itu masuk akal — saya akan menyertakan field tersebut dalam objek respons." },
+      { "context": "Raising a design concern", "phrase": "I have a performance concern with that approach — returning all records at once could be very slow.", "indonesian": "Saya punya kekhawatiran performa dengan pendekatan itu — mengembalikan semua record sekaligus bisa sangat lambat." },
+      { "context": "Proposing an alternative", "phrase": "What if we use pagination? I'll add a page and limit parameter — would that work?", "indonesian": "Bagaimana kalau kita gunakan pagination? Saya akan tambahkan parameter page dan limit — apakah itu cocok?" }
+    ]
+  }
+}

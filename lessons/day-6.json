@@ -1,0 +1,46 @@
+{
+  "day": 6,
+  "title": "Reporting a Bug to Your Team",
+  "warmup": {
+    "title": "🔥 Bug Reporting Vocabulary — Day 6",
+    "words": [
+      { "word": "reproduce", "meaning": "To make a bug happen again by following specific steps", "example": "I can reproduce this bug every time I click the submit button twice." },
+      { "word": "stack trace", "meaning": "The list of function calls shown in an error log", "example": "Check the stack trace — the error starts in the UserController." },
+      { "word": "regression", "meaning": "A bug introduced by a recent code change that broke something that worked before", "example": "This is a regression — it was working fine before last Friday's deploy." },
+      { "word": "intermittent", "meaning": "Happening only sometimes, not consistently", "example": "The crash is intermittent — it doesn't happen every time." },
+      { "word": "severity", "meaning": "How serious or critical a bug is", "example": "This is a high-severity bug — it blocks users from logging in." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Bug Report in Stand-Up",
+    "scenario": "Morning Stand-Up — Reporting a Bug",
+    "context": "During testing yesterday, you found a critical bug: when a user tries to reset their password, they get a 500 Internal Server Error. You can reproduce it consistently. It appears to be related to a change made by your colleague last Wednesday. It is blocking users from resetting passwords in production.",
+    "prompt": "Report this bug in the stand-up. Describe what the bug is, its severity, how to reproduce it, and what you think is causing it.",
+    "sample_answer": "I need to flag a critical bug I found yesterday. When a user tries to reset their password, they get a 500 server error — I can reproduce it 100% of the time. This is high severity because it's completely blocking users from resetting their passwords in production. Looking at the git log, it appears to be a regression from Wednesday's commit that changed the email service config. I'd like to prioritize a fix for this today. Arif — can we sync after this call since it looks related to your changes?"
+  },
+  "reading": {
+    "title": "📖 Reading — Writing a Good Bug Report",
+    "passage": "A well-written bug report is one of the most valuable contributions a developer can make. A good report helps the team understand the problem quickly, reproduce it reliably, and fix it efficiently.\n\nEvery bug report should include: (1) A clear, specific title. Not 'Button broken' but 'Submit button throws 400 error when email field is empty.' (2) Steps to reproduce — the exact sequence of actions that triggers the bug. (3) Expected behavior — what should happen. (4) Actual behavior — what actually happens. (5) Environment details — browser, OS, app version. (6) Screenshots or logs if available.\n\nThe title is especially important. It should describe the problem, not just the symptom. 'Page crashes' is bad. 'Dashboard page throws TypeError when user has no orders' is good.\n\nAvoid vague language. 'Sometimes it doesn't work' helps no one. 'The error occurs when submitting the form with a phone number longer than 15 digits' is actionable.",
+    "questions": [
+      "What should a good bug report title describe?",
+      "Why is 'Sometimes it doesn't work' a bad way to describe a bug?"
+    ],
+    "answers": [
+      "The title should describe the problem specifically, not just the symptom.",
+      "It is vague and not actionable — it doesn't help developers understand when or how to reproduce the issue."
+    ],
+    "key_phrases": [
+      { "phrase": "I can reproduce this 100% of the time", "meaning": "Saya bisa mereproduksi ini 100% setiap saat" },
+      { "phrase": "This looks like a regression from...", "meaning": "Ini terlihat seperti regresi dari..." },
+      { "phrase": "This is blocking users from...", "meaning": "Ini menghalangi pengguna dari..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Bug Reporting Phrases",
+    "items": [
+      { "context": "Introducing the bug", "phrase": "I need to flag a bug I found — it's pretty critical.", "indonesian": "Saya perlu melaporkan bug yang saya temukan — ini cukup kritis." },
+      { "context": "Describing reproduction", "phrase": "Here are the steps to reproduce it: first..., then..., then...", "indonesian": "Ini langkah-langkah untuk mereproduksinya: pertama..., lalu..., kemudian..." },
+      { "context": "Proposing a fix", "phrase": "I think the issue is in... — I can take a look at fixing it today.", "indonesian": "Saya rasa masalahnya ada di... — saya bisa mencoba memperbaikinya hari ini." }
+    ]
+  }
+}

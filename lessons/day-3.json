@@ -1,0 +1,46 @@
+{
+  "day": 3,
+  "title": "Asking for Help & Clarification",
+  "warmup": {
+    "title": "🔥 Clarification Vocabulary — Day 3",
+    "words": [
+      { "word": "clarify", "meaning": "To make something clearer and easier to understand", "example": "Could you clarify the requirements for the dashboard?" },
+      { "word": "requirement", "meaning": "Something that is needed or expected in a project", "example": "The client added a new requirement: dark mode support." },
+      { "word": "scope", "meaning": "The range of work included in a project", "example": "That feature is out of scope for this sprint." },
+      { "word": "assumption", "meaning": "Something you believe to be true without proof", "example": "I was working under the assumption that the API was ready." },
+      { "word": "confirm", "meaning": "To make sure something is correct or agreed upon", "example": "Can you confirm the deadline for this task?" }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Asking for Clarification",
+    "scenario": "Ticket Clarification with Product Manager",
+    "context": "You are assigned a Jira ticket to 'Add notifications to the user dashboard.' But the description is vague — it doesn't say what types of notifications, where they should appear, or how they should look. Your PM is online. You need to ask for clarification before you start coding.",
+    "prompt": "Message or call your PM to ask for clarification. Be polite, specific, and explain why you need the information before you can start.",
+    "sample_answer": "Hey! I just picked up the notifications ticket. Before I start, I have a few questions to make sure I build the right thing. First, what types of notifications should appear — only system alerts, or also messages from other users? Second, where exactly should they show up — a bell icon in the header, or a separate panel? And third, is there a design mockup I should follow? I want to make sure I'm aligned before writing any code. Thanks!"
+  },
+  "reading": {
+    "title": "📖 Reading — Why Clarification Saves Time",
+    "passage": "Many developers make a common mistake: they start coding before fully understanding the requirements. This leads to rework — building the wrong thing and then rebuilding it correctly.\n\nBefore starting any significant task, take five minutes to read the ticket thoroughly. Identify any gaps or ambiguities. What is unclear? What assumptions are you making? What information is missing?\n\nAsking good questions upfront is a sign of professionalism, not weakness. It shows that you think carefully about your work. A short clarification conversation before starting can save days of wasted effort.\n\nWhen asking for clarification, be specific. Don't just say 'I don't understand this ticket.' Instead, say 'I have two specific questions about this ticket.' Then list your questions clearly. This makes it easy for your PM or tech lead to give you exactly the answers you need.",
+    "questions": [
+      "What is 'rework' in software development?",
+      "What should you do before starting any significant task?"
+    ],
+    "answers": [
+      "Rework means building the wrong thing and then rebuilding it correctly — wasted effort.",
+      "Read the ticket thoroughly, identify gaps, and ask clarifying questions upfront."
+    ],
+    "key_phrases": [
+      { "phrase": "Before I start, I have a few questions", "meaning": "Sebelum saya mulai, saya punya beberapa pertanyaan" },
+      { "phrase": "Could you clarify what you mean by...?", "meaning": "Bisakah kamu menjelaskan maksud dari...?" },
+      { "phrase": "Just to confirm my understanding...", "meaning": "Sekedar memastikan pemahaman saya..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Clarification Phrases",
+    "items": [
+      { "context": "Asking a question politely", "phrase": "Could you help me understand what you mean by...?", "indonesian": "Bisakah kamu bantu saya memahami apa yang kamu maksud dengan...?" },
+      { "context": "Checking your understanding", "phrase": "Just to make sure I understand — are you saying that...?", "indonesian": "Hanya untuk memastikan saya mengerti — apakah kamu maksudkan bahwa...?" },
+      { "context": "Admitting uncertainty", "phrase": "I want to clarify this before I start coding, to avoid rework.", "indonesian": "Saya ingin memperjelas ini sebelum mulai coding, agar tidak ada pekerjaan ulang." }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "day": 8,
+  "title": "Discussing Hotfixes & Incidents",
+  "warmup": {
+    "title": "🔥 Incident Vocabulary — Day 8",
+    "words": [
+      { "word": "hotfix", "meaning": "An urgent fix deployed directly to production to resolve a critical issue", "example": "We need to push a hotfix tonight — users can't checkout." },
+      { "word": "rollback", "meaning": "Reverting to a previous version of the software", "example": "If the hotfix fails, we'll rollback to yesterday's build." },
+      { "word": "downtime", "meaning": "A period when the system is unavailable or not working", "example": "The downtime was 12 minutes — we need to prevent this in the future." },
+      { "word": "post-mortem", "meaning": "A meeting held after an incident to understand what went wrong", "example": "We'll do a post-mortem on Friday to analyze the outage." },
+      { "word": "on-call", "meaning": "Being available to handle urgent issues outside of normal hours", "example": "I'm on-call this week, so I have to respond to any alerts." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Incident Response",
+    "scenario": "Emergency Slack Call — Production is Down",
+    "context": "It is 7 PM. You get an alert on Slack: the payment service is returning 503 errors. Users cannot complete purchases. Your team lead starts a video call. You are the engineer on duty tonight. Your team lead asks: 'What's the situation? What do we know so far?'",
+    "prompt": "Give a quick incident update. Report what you know, what actions you are taking, and what the impact is on users.",
+    "sample_answer": "Here's what we know so far: starting at around 6:45 PM, the payment service started returning 503 errors. Monitoring shows 100% of payment requests are failing. The checkout page is completely broken. I checked the service logs and I'm seeing database connection pool errors — it looks like we're hitting the max connection limit. The service itself is running, so I don't think it's a crash. My immediate action: I'm going to increase the connection pool limit in the config and redeploy. I'll also check if the last deployment changed anything related to the database layer. I should have an update in 10 minutes. Should we send a status page notification to users now?"
+  },
+  "reading": {
+    "title": "📖 Reading — Handling Production Incidents",
+    "passage": "Production incidents are stressful, but how your team communicates during one is just as important as the technical fix. Clear, calm communication keeps everyone informed and prevents panic.\n\nWhen an incident starts, the first thing to do is acknowledge it immediately — even if you don't know the cause yet. 'We're aware of the issue and investigating' is better than silence.\n\nAssign clear roles: one person leads the investigation and fixes the problem; another person communicates with stakeholders and updates the status page. Do not let everyone debug at the same time — too many cooks in the kitchen cause confusion.\n\nAfter the incident is resolved, always hold a blameless post-mortem. The goal is not to find who made the mistake, but to understand what went wrong and how to prevent it in the future. Every incident is a learning opportunity.",
+    "questions": [
+      "What should you do first when an incident starts, even if you don't know the cause?",
+      "What is the goal of a blameless post-mortem?"
+    ],
+    "answers": [
+      "Acknowledge the incident immediately and say you are aware and investigating.",
+      "To understand what went wrong and how to prevent it in the future — not to find who made the mistake."
+    ],
+    "key_phrases": [
+      { "phrase": "We're aware of the issue and investigating", "meaning": "Kami mengetahui masalah ini dan sedang menyelidiki" },
+      { "phrase": "Here's what we know so far", "meaning": "Ini yang kami ketahui sejauh ini" },
+      { "phrase": "I should have an update in...", "meaning": "Saya akan punya update dalam..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Incident Communication Phrases",
+    "items": [
+      { "context": "Acknowledging an incident", "phrase": "We're aware of the issue — I'm investigating now and will update you in 15 minutes.", "indonesian": "Kami mengetahui masalah ini — saya sedang menyelidiki dan akan memberi update dalam 15 menit." },
+      { "context": "Reporting impact", "phrase": "The impact is significant — users are unable to complete their orders.", "indonesian": "Dampaknya signifikan — pengguna tidak dapat menyelesaikan pesanan mereka." },
+      { "context": "After the fix", "phrase": "The issue has been resolved. Here's a quick summary of what happened...", "indonesian": "Masalah telah diselesaikan. Berikut ringkasan singkat tentang apa yang terjadi..." }
+    ]
+  }
+}

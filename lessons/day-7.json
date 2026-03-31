@@ -1,0 +1,46 @@
+{
+  "day": 7,
+  "title": "Debugging Conversations",
+  "warmup": {
+    "title": "🔥 Debugging Vocabulary — Day 7",
+    "words": [
+      { "word": "root cause", "meaning": "The fundamental reason why a bug or problem exists", "example": "We found the root cause — it was a race condition in the async function." },
+      { "word": "null pointer", "meaning": "An error caused by trying to use a variable that has no value", "example": "The crash is caused by a null pointer — the user object is undefined." },
+      { "word": "edge case", "meaning": "A rare or unusual situation that can cause unexpected behavior", "example": "This is an edge case — it only fails when the input is exactly 255 characters." },
+      { "word": "log", "meaning": "A recorded message output by a program for debugging purposes", "example": "I added some logs to trace where the execution stops." },
+      { "word": "breakpoint", "meaning": "A mark in the code where execution pauses during debugging", "example": "Set a breakpoint at line 42 to inspect the variable state." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Explaining a Bug to a Colleague",
+    "scenario": "Pair Debugging Session",
+    "context": "You are stuck on a bug for 2 hours. The user list on the admin dashboard only loads on the first page load. When you navigate away and come back, it shows an empty list. You suspect it is a caching issue in the React state. You ask your colleague Sari for help.",
+    "prompt": "Explain the bug to Sari clearly so she can help you debug. Describe what you see, what you have already tried, and what you think the cause might be.",
+    "sample_answer": "Hey Sari, can I get a second pair of eyes on something? I've been stuck on this for a couple of hours. The admin user list loads fine on the first visit, but if I navigate to another page and come back, the list is completely empty. The network tab shows the API call is actually succeeding and returning data, so the data is there — it's just not being displayed. I think it might be a state management issue. I'm using Redux and I suspect the store isn't being cleared properly when the component mounts the second time. I've tried adding a console.log in the useEffect but the data never reaches the render function on the second load. Do you have any ideas?"
+  },
+  "reading": {
+    "title": "📖 Reading — Rubber Duck Debugging",
+    "passage": "There is a famous technique in software engineering called rubber duck debugging. The idea is simple: when you are stuck on a bug, explain your code line by line to a rubber duck (or any inanimate object). More often than not, you will find the bug yourself while explaining it.\n\nThis technique works because the act of putting your thoughts into words forces you to slow down and think more carefully. You stop making assumptions and start actually reading what the code says.\n\nThe same principle applies when asking a colleague for help. Before you say 'I don't know what's wrong,' take a moment to structure your explanation: What is the expected behavior? What is the actual behavior? What have you already tried? What do you think might be causing the issue?\n\nThis structured approach not only helps your colleague understand faster, but often helps you solve the problem yourself before they even respond. The act of explaining is itself a debugging tool.",
+    "questions": [
+      "What is rubber duck debugging and why does it work?",
+      "What four questions should you answer before asking a colleague for help?"
+    ],
+    "answers": [
+      "Explaining code to a rubber duck forces you to slow down and stop making assumptions, often revealing the bug.",
+      "Expected behavior, actual behavior, what you have tried, and what you think might be causing the issue."
+    ],
+    "key_phrases": [
+      { "phrase": "Can I get a second pair of eyes on this?", "meaning": "Bisakah kamu melihat ini bersamaku?" },
+      { "phrase": "I've been stuck on this for...", "meaning": "Saya sudah terhambat di sini selama..." },
+      { "phrase": "I suspect the issue might be...", "meaning": "Saya menduga masalahnya mungkin di..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Debugging Discussion Phrases",
+    "items": [
+      { "context": "Asking for help", "phrase": "Can I get a second pair of eyes on this? I've been stuck for a while.", "indonesian": "Bisakah kamu lihat ini bersamaku? Saya sudah terhambat cukup lama." },
+      { "context": "Explaining what you've tried", "phrase": "I've already tried... but it didn't fix the issue.", "indonesian": "Saya sudah mencoba... tapi itu tidak menyelesaikan masalahnya." },
+      { "context": "Sharing a hypothesis", "phrase": "My best guess is that the issue is somewhere in the authentication middleware.", "indonesian": "Dugaan terbaik saya adalah masalahnya ada di suatu tempat di middleware autentikasi." }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "day": 13,
+  "title": "Discussing Technical Debt",
+  "warmup": {
+    "title": "🔥 Technical Debt Vocabulary — Day 13",
+    "words": [
+      { "word": "technical debt", "meaning": "The extra work created by quick or suboptimal solutions that need to be fixed later", "example": "We took on technical debt to hit the deadline — now we need to pay it back." },
+      { "word": "legacy code", "meaning": "Old code that is difficult to change but still in production", "example": "This legacy code was written 5 years ago — nobody wants to touch it." },
+      { "word": "code smell", "meaning": "A sign in the code that suggests a deeper problem", "example": "That 500-line function is a code smell — it's doing too many things." },
+      { "word": "refactoring", "meaning": "Improving the internal structure of code without changing its behavior", "example": "We spent the whole sprint refactoring the payment module." },
+      { "word": "maintainability", "meaning": "How easy it is to understand, change, and maintain code over time", "example": "Good variable names improve maintainability significantly." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Proposing Tech Debt Cleanup",
+    "scenario": "Sprint Planning — Proposing a Refactoring Task",
+    "context": "Your team's codebase has a module called OrderProcessor that has grown to 1,200 lines of code over 3 years. It is becoming very hard to add new features because everything is tangled together. Every time someone modifies it, new bugs appear. You want to allocate time in the next sprint to refactor it.",
+    "prompt": "Propose the refactoring task to your tech lead and PM. Make a business case for it — explain the cost of NOT doing it and the benefit of doing it.",
+    "sample_answer": "I'd like to propose a refactoring task for the OrderProcessor module in the next sprint. I know we usually focus on features, so let me explain why this is worth our time. The OrderProcessor is now 1,200 lines of code and handles 6 different concerns — validation, pricing, discounts, notifications, logging, and database updates. Every time we touch it, we introduce new bugs — we've had 4 regressions in the last two sprints caused by changes to this file. It's slowing down our feature delivery. I estimate it would take 2-3 days to refactor it into separate, testable modules. After that, we'll be able to develop features faster and with fewer bugs. The cost of not doing it will keep compounding. What do you think?"
+  },
+  "reading": {
+    "title": "📖 Reading — Managing Technical Debt",
+    "passage": "Technical debt is inevitable in software development. When you are under time pressure, you sometimes make compromises — skip tests, use a quick workaround, or write code that works but is hard to maintain. This is technical debt: future work you owe yourself.\n\nThe danger of technical debt is that it compounds. A little debt here and there becomes a codebase so tangled that adding any new feature requires a week of archaeology.\n\nSmart teams manage technical debt proactively. They do not wait until the codebase becomes unmaintainable. Instead, they allocate a percentage of each sprint — often 20% — to paying down debt.\n\nWhen proposing technical debt work to non-technical stakeholders, frame it in business terms. Do not say 'We need to refactor this class.' Say 'Cleaning this up will reduce the number of bugs we ship by 50% and make us 30% faster at building new features.' Business people understand speed and reliability, even if they do not understand code structure.",
+    "questions": [
+      "Why does technical debt compound over time?",
+      "How should you frame technical debt work to non-technical stakeholders?"
+    ],
+    "answers": [
+      "Because a little debt accumulates into a tangled codebase where even small changes require significant effort.",
+      "In business terms: faster feature delivery, fewer bugs, and improved reliability — not in technical terms."
+    ],
+    "key_phrases": [
+      { "phrase": "This is slowing down our feature delivery", "meaning": "Ini memperlambat pengembangan fitur kita" },
+      { "phrase": "The cost of not fixing this will compound", "meaning": "Biaya tidak memperbaiki ini akan terus bertambah" },
+      { "phrase": "I estimate this will take... days", "meaning": "Saya perkirakan ini akan membutuhkan... hari" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Technical Debt Discussion Phrases",
+    "items": [
+      { "context": "Making the business case", "phrase": "If we invest 2 days now, we'll save weeks of debugging later.", "indonesian": "Jika kita investasikan 2 hari sekarang, kita akan menghemat berminggu-minggu debugging nanti." },
+      { "context": "Describing the problem", "phrase": "This module has become very hard to maintain — every change we make introduces new bugs.", "indonesian": "Modul ini menjadi sangat sulit dipelihara — setiap perubahan yang kita buat memperkenalkan bug baru." },
+      { "context": "Proposing a solution", "phrase": "I'd like to allocate some time this sprint to clean this up properly.", "indonesian": "Saya ingin mengalokasikan waktu di sprint ini untuk membersihkannya dengan benar." }
+    ]
+  }
+}

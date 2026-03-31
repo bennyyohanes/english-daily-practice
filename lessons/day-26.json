@@ -1,0 +1,46 @@
+{
+  "day": 26,
+  "title": "Technical Presentations",
+  "warmup": {
+    "title": "🔥 Presentation Vocabulary — Day 26",
+    "words": [
+      { "word": "agenda", "meaning": "A list of topics to be discussed in a meeting or presentation", "example": "Today's agenda covers three topics: the Q3 review, roadmap, and Q&A." },
+      { "word": "demo", "meaning": "A live or recorded demonstration of a product or feature", "example": "Let me do a quick demo of the new search feature." },
+      { "word": "takeaway", "meaning": "The key point or conclusion someone should remember from a presentation", "example": "The main takeaway from today is: we need to fix performance before adding new features." },
+      { "word": "slide deck", "meaning": "A collection of slides used for a presentation", "example": "I'll share the slide deck after the meeting so you can review it." },
+      { "word": "Q&A", "meaning": "Question and Answer session at the end of a presentation", "example": "We'll have 10 minutes for Q&A at the end." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Presenting a Technical Demo",
+    "scenario": "Sprint Demo to Stakeholders",
+    "context": "At the end of the sprint, you are presenting the new user analytics dashboard to stakeholders — product managers and business executives. The audience is mixed: some are technical, most are not. You need to demonstrate the feature, explain its value, and invite feedback.",
+    "prompt": "Present the analytics dashboard demo. Start with the business value, show the key features, and close by inviting feedback. Keep it clear and engaging for a mixed audience.",
+    "sample_answer": "Good afternoon everyone! I'm excited to show you what the engineering team shipped this sprint — the new user analytics dashboard. The business problem we were solving: our customer success team was spending hours manually exporting data from different places to answer questions like 'How many users activated this week?' or 'Which features are most popular?' Now they can answer those questions in seconds. Let me show you. Here's the dashboard. This number at the top shows daily active users — you can click on it to drill down by date range. This chart on the right shows feature usage — you can see that the export function is by far the most popular, which is useful data for the product roadmap. And this heatmap shows when users are most active — looks like Monday mornings are peak time. Everything here is real-time and you can filter by user segment. We're really happy with how this turned out. I'd love to hear your feedback — is there any other data you wish you could see here?"
+  },
+  "reading": {
+    "title": "📖 Reading — Presenting Technical Work to Non-Technical Audiences",
+    "passage": "One of the most valuable skills for a developer is the ability to present technical work to a non-technical audience. Product managers, executives, and clients need to understand what you built and why it matters — but they do not care about the implementation details.\n\nThe cardinal rule: lead with the business value, not the technical solution. Do not start with 'We implemented a new caching layer with Redis.' Start with 'Page load time dropped from 8 seconds to under 1 second — users now see results immediately.'\n\nUse concrete numbers wherever possible. 'We improved performance' is vague. '70% reduction in page load time, from 8 seconds to 2.4 seconds' is compelling.\n\nWhen doing a live demo, always have a backup plan. Live demos fail at the worst possible times. Have screenshots or a recorded video ready in case the demo environment goes down.\n\nEnd with a clear call to action. What do you want your audience to do after this presentation? Approve the next feature? Provide feedback? Make a decision? State it explicitly.",
+    "questions": [
+      "What is the cardinal rule when presenting technical work to non-technical audiences?",
+      "What backup plan should you have for a live demo?"
+    ],
+    "answers": [
+      "Lead with business value, not technical details. Start with the impact, not the implementation.",
+      "Have screenshots or a recorded video ready in case the live demo environment fails."
+    ],
+    "key_phrases": [
+      { "phrase": "Let me show you what we built this sprint", "meaning": "Biarkan saya tunjukkan apa yang kita bangun di sprint ini" },
+      { "phrase": "The business problem we were solving was...", "meaning": "Masalah bisnis yang kita selesaikan adalah..." },
+      { "phrase": "I'd love to hear your feedback on this", "meaning": "Saya ingin mendengar pendapat kamu tentang ini" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Presentation Phrases",
+    "items": [
+      { "context": "Opening a presentation", "phrase": "Before I start, here's the agenda for today: first..., then..., and we'll close with Q&A.", "indonesian": "Sebelum saya mulai, ini agenda untuk hari ini: pertama..., lalu..., dan kita akan tutup dengan tanya jawab." },
+      { "context": "Transitioning in a demo", "phrase": "Now let me show you how this works in practice — here's a live demo.", "indonesian": "Sekarang biarkan saya tunjukkan bagaimana ini bekerja dalam praktik — ini demo live-nya." },
+      { "context": "Closing and inviting feedback", "phrase": "That's the overview. Any questions or feedback before we wrap up?", "indonesian": "Itulah gambarannya. Ada pertanyaan atau masukan sebelum kita selesai?" }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Daily Practice 🚀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">🚀</div>
+      <h1>English Daily Practice</h1>
+      <p class="login-subtitle">For Programmers 👨‍💻</p>
+      <form id="login-form">
+        <div class="input-group">
+          <input type="password" id="password-input" placeholder="Enter password" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn-primary">Login →</button>
+      </form>
+      <p id="login-error" class="error-msg hidden">❌ Access Denied. Wrong password.</p>
+    </div>
+  </div>
+
+  <!-- Main App -->
+  <div id="app" class="hidden">
+    <header class="app-header">
+      <div class="header-content">
+        <h1>English Daily Practice <span class="emoji">🚀</span></h1>
+        <div class="day-badge">Day <span id="current-day">1</span> of 30</div>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="lesson-header">
+        <h2 id="lesson-title">Loading...</h2>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="warmup">🔥 Warm-Up</button>
+        <button class="tab-btn" data-tab="speaking">💬 Speaking</button>
+        <button class="tab-btn" data-tab="reading">📖 Reading</button>
+        <button class="tab-btn" data-tab="phrases">🛠️ Phrases</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- Warm-Up Tab -->
+        <div id="tab-warmup" class="tab-pane active">
+          <h3 id="warmup-title">🔥 Warm-Up Vocabulary</h3>
+          <div id="warmup-words" class="vocab-grid"></div>
+        </div>
+
+        <!-- Speaking Tab -->
+        <div id="tab-speaking" class="tab-pane hidden">
+          <h3 id="speaking-title">💬 Speaking Simulation</h3>
+          <div id="speaking-content"></div>
+        </div>
+
+        <!-- Reading Tab -->
+        <div id="tab-reading" class="tab-pane hidden">
+          <h3 id="reading-title">📖 Reading Practice</h3>
+          <div id="reading-content"></div>
+        </div>
+
+        <!-- Phrases Tab -->
+        <div id="tab-phrases" class="tab-pane hidden">
+          <h3 id="phrases-title">🛠️ Useful Phrases</h3>
+          <div id="phrases-content"></div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="nav-buttons">
+        <button id="prev-btn" class="btn-secondary" onclick="navigate(-1)">← Previous Day</button>
+        <span class="day-indicator">Day <span id="nav-day">1</span></span>
+        <button id="next-btn" class="btn-secondary" onclick="navigate(1)">Next Day →</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

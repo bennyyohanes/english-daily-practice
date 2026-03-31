@@ -1,0 +1,46 @@
+{
+  "day": 17,
+  "title": "Feature Requests & Stakeholder Communication",
+  "warmup": {
+    "title": "🔥 Feature Request Vocabulary — Day 17",
+    "words": [
+      { "word": "stakeholder", "meaning": "Anyone who has an interest in or is affected by a project", "example": "The main stakeholders are the product team, engineering, and customer success." },
+      { "word": "feasibility", "meaning": "Whether something is possible or practical to build", "example": "Let me check the feasibility before we promise this to the client." },
+      { "word": "trade-off", "meaning": "A situation where gaining one benefit requires accepting a loss elsewhere", "example": "The trade-off is: faster delivery but lower code quality." },
+      { "word": "MVP", "meaning": "Minimum Viable Product — the simplest version of a feature that delivers value", "example": "Let's build the MVP first and iterate based on user feedback." },
+      { "word": "iterate", "meaning": "To improve something through repeated cycles of feedback and refinement", "example": "We'll release v1 and iterate based on what users actually need." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Responding to a Feature Request",
+    "scenario": "Meeting with a Sales Manager",
+    "context": "The head of sales, Pak Rizki, asks you to add a 'bulk import from Excel' feature by next week because he promised a big client. In your estimation, this feature would take at least 3 weeks to build properly. You need to manage expectations without damaging the business relationship.",
+    "prompt": "Respond to Pak Rizki professionally. Explain the technical reality, acknowledge the business importance, and offer alternatives or a realistic timeline.",
+    "sample_answer": "Pak Rizki, I completely understand the importance of this — landing that client would be great for the business. I want to be transparent so we can set the right expectations. Building a bulk Excel import feature properly will take about 3 weeks. This includes file validation, error handling for malformed data, and making sure the import is reliable for large files. If we rush it, we risk delivering something buggy that could actually embarrass us in front of the client. That said, I want to help close this deal. A couple of alternatives: we could offer a CSV import instead — that's simpler and would take about 5 days. Or, if the client just needs to get their existing data in, we could do a one-time manual data migration for free as a temporary solution while we build the proper feature. What do you think would work best for the client?"
+  },
+  "reading": {
+    "title": "📖 Reading — Managing Feature Requests Professionally",
+    "passage": "Developers are frequently asked to build things faster than is technically feasible. How you respond to these requests defines your reputation as a professional.\n\nThe worst response is to immediately say 'yes' to meet an unrealistic deadline and then deliver something broken. This damages trust far more than a delayed but working feature.\n\nThe second worst response is a flat 'no' without alternatives. 'That's impossible' is never the right answer. There is always something you can do.\n\nThe best response acknowledges the business need, explains the technical constraint clearly, and offers alternatives. This shows you are thinking about the business, not just the code.\n\nWhen explaining why something takes time, be specific. 'It will take 3 weeks' means nothing to a non-technical person. 'It will take 3 weeks because we need to handle 15 different error scenarios for invalid data' is understandable and credible.\n\nAlways frame the conversation around the user and the business outcome, not around your technical limitations.",
+    "questions": [
+      "What is the worst way to respond to an unrealistic feature request, and why?",
+      "How should you explain why something takes time to a non-technical stakeholder?"
+    ],
+    "answers": [
+      "Saying yes and delivering broken work — this damages trust far more than a delayed but working feature.",
+      "Be specific about what the work involves, not just give a duration. Explain the specific tasks or challenges."
+    ],
+    "key_phrases": [
+      { "phrase": "I want to be transparent about the timeline", "meaning": "Saya ingin jujur tentang jadwalnya" },
+      { "phrase": "An alternative we could offer is...", "meaning": "Alternatif yang bisa kita tawarkan adalah..." },
+      { "phrase": "Let me check the feasibility and get back to you", "meaning": "Izinkan saya memeriksa kelayakannya dan memberi tahu kamu nanti" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Feature Request Phrases",
+    "items": [
+      { "context": "Setting realistic expectations", "phrase": "I want to be honest about the timeline so we can set the right expectations.", "indonesian": "Saya ingin jujur tentang jadwannya agar kita bisa menetapkan ekspektasi yang tepat." },
+      { "context": "Offering an MVP alternative", "phrase": "We could build a simpler version first and iterate — would that work for the client?", "indonesian": "Kita bisa membangun versi yang lebih sederhana dulu dan iterasi — apakah itu cocok untuk klien?" },
+      { "context": "Checking feasibility", "phrase": "Let me investigate this and come back to you with a realistic estimate by end of day.", "indonesian": "Biarkan saya menyelidiki ini dan kembali kepadamu dengan estimasi yang realistis sebelum akhir hari." }
+    ]
+  }
+}

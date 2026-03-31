@@ -1,0 +1,46 @@
+{
+  "day": 10,
+  "title": "Bug Triage & Prioritization",
+  "warmup": {
+    "title": "🔥 Triage Vocabulary — Day 10",
+    "words": [
+      { "word": "triage", "meaning": "The process of assessing and prioritizing bugs or tasks by importance", "example": "Let's do a bug triage to decide which issues to fix this sprint." },
+      { "word": "critical", "meaning": "A bug that causes complete system failure or data loss", "example": "A critical bug was found — users' data is being exposed." },
+      { "word": "workaround", "meaning": "A temporary solution that avoids a bug without fully fixing it", "example": "There's a workaround — users can use the mobile app instead." },
+      { "word": "impact", "meaning": "The effect of a bug on users or the business", "example": "The impact is low — only 2% of users use this feature." },
+      { "word": "defer", "meaning": "To postpone fixing a bug to a later sprint or version", "example": "We can defer this cosmetic bug to next sprint." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Bug Triage Meeting",
+    "scenario": "Weekly Bug Triage with Tech Lead",
+    "context": "Your team has a backlog of 8 bugs. You and your tech lead are deciding which ones to fix this sprint. There are 3 bugs in question: Bug A affects the login page — 30% of users report it. Bug B is a visual glitch on the settings page — 5 users reported it. Bug C causes incorrect totals in invoices — only happens when tax rate is 0%.",
+    "prompt": "Discuss which bug to prioritize first and why. Consider impact on users, business risk, and effort to fix.",
+    "sample_answer": "Looking at these three bugs, I'd recommend tackling Bug C first — the invoice total calculation issue. Even though it only affects users with a 0% tax rate, incorrect financial data is a serious business risk. If customers are being billed incorrectly, that's a legal and trust issue. Bug A should be second priority — 30% of users affected is significant and login issues drive churn. Bug B I'd defer to next sprint; a visual glitch on the settings page with only 5 reports is low impact. Does that prioritization make sense to you, or is there a business context I'm missing?"
+  },
+  "reading": {
+    "title": "📖 Reading — How to Prioritize Bugs",
+    "passage": "Not all bugs are equal. A good engineering team has a systematic way to prioritize which bugs to fix first. The two key dimensions are severity (how bad is the bug?) and frequency (how often does it happen?).\n\nA bug that crashes the application for 50% of users every time is more urgent than a cosmetic misalignment that 1% of users encounter once a month.\n\nBut severity and frequency are not the only factors. Business impact matters too. A bug in the checkout flow is more critical than a bug in the rarely-used admin reports, even if both affect the same number of users.\n\nA simple prioritization framework: P1 (Critical) — fix immediately, it blocks core functionality. P2 (High) — fix in current sprint. P3 (Medium) — fix in next sprint. P4 (Low) — fix when there is time, or defer indefinitely.\n\nDocument your reasoning. When you decide to defer a bug, write down why. This creates accountability and helps future teams understand the trade-offs made.",
+    "questions": [
+      "What are the two key dimensions for prioritizing bugs?",
+      "Why does business impact matter beyond just severity and frequency?"
+    ],
+    "answers": [
+      "Severity (how bad is the bug) and frequency (how often does it happen).",
+      "A bug in a critical business flow like checkout is more urgent than one in a rarely-used feature, even with the same user impact."
+    ],
+    "key_phrases": [
+      { "phrase": "I'd recommend prioritizing this first because...", "meaning": "Saya menyarankan untuk memprioritaskan ini pertama karena..." },
+      { "phrase": "The business risk here is...", "meaning": "Risiko bisnis di sini adalah..." },
+      { "phrase": "We can defer this to next sprint", "meaning": "Kita bisa menunda ini ke sprint berikutnya" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Bug Triage Phrases",
+    "items": [
+      { "context": "Assessing severity", "phrase": "This is a P1 — it blocks core functionality and needs to be fixed today.", "indonesian": "Ini adalah P1 — menghalangi fungsionalitas inti dan harus diperbaiki hari ini." },
+      { "context": "Recommending deferral", "phrase": "I'd suggest deferring this one — the impact is minimal and we have bigger fires to fight.", "indonesian": "Saya sarankan untuk menunda ini — dampaknya minimal dan kami punya masalah yang lebih besar." },
+      { "context": "Considering workaround", "phrase": "There's a workaround for now — let's document it and fix it properly next sprint.", "indonesian": "Ada solusi sementara untuk ini — ayo dokumentasikan dan perbaiki dengan benar di sprint berikutnya." }
+    ]
+  }
+}

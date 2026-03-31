@@ -1,0 +1,46 @@
+{
+  "day": 28,
+  "title": "Remote Work Communication",
+  "warmup": {
+    "title": "🔥 Remote Work Vocabulary — Day 28",
+    "words": [
+      { "word": "async communication", "meaning": "Communication that does not require all participants to be available at the same time", "example": "We rely on async communication since our team is across three time zones." },
+      { "word": "context switching", "meaning": "Moving between different tasks or conversations, which reduces focus and productivity", "example": "Constant Slack notifications cause context switching and slow me down." },
+      { "word": "deep work", "meaning": "Focused, uninterrupted work on cognitively demanding tasks", "example": "I block two hours every morning for deep work with notifications off." },
+      { "word": "documentation-first", "meaning": "A culture where important decisions and processes are written down rather than communicated verbally", "example": "We are documentation-first — every decision is recorded in Confluence." },
+      { "word": "time zone", "meaning": "A region of the globe that observes a uniform standard time", "example": "Our team members are in Jakarta, London, and San Francisco — three different time zones." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Remote Team Communication",
+    "scenario": "Team Meeting — Improving Remote Communication",
+    "context": "Your team is fully remote across multiple time zones. Problems have emerged: some decisions are made in verbal calls and never written down, new team members don't know where to find information, and some developers are overwhelmed by constant Slack messages. Your tech lead asks: 'What changes to our communication process would help?'",
+    "prompt": "Propose two or three concrete improvements to your team's remote communication. Be specific and explain the benefit of each change.",
+    "sample_answer": "Thanks for raising this — I've been thinking about it too. I have three concrete suggestions. First, let's adopt a documentation-first approach for decisions. After every important meeting or decision, someone writes a brief summary in Confluence within 24 hours. This helps async teammates catch up and means we're not answering the same questions repeatedly three months later. Second, let's establish 'focus hours' — a shared block, say 9-11 AM Jakarta time, where we don't expect immediate Slack responses. This protects deep work time for everyone, especially developers who need long periods of uninterrupted concentration. Third, let's create a #decisions channel where we post a one-liner whenever something important is agreed. Something like 'We decided to move the database to PostgreSQL — link to rationale doc.' This creates a lightweight searchable record. These three changes together would reduce noise, improve knowledge sharing, and respect everyone's time zones. What does the team think?"
+  },
+  "reading": {
+    "title": "📖 Reading — Effective Async Communication for Developers",
+    "passage": "Remote work has become the norm for many engineering teams. The developers who thrive in remote environments share a common skill: they communicate exceptionally well in writing.\n\nAsynchronous communication is the backbone of remote work. When your teammates are in different time zones, you cannot rely on quick verbal conversations. Instead, you must write messages that are clear enough to be understood without a follow-up call.\n\nThe key to good async messages: provide enough context so the reader does not need to ask clarifying questions. Instead of 'Can you take a look at my PR?' write 'I've submitted PR #247 for the search feature. It's ready for review — focus especially on the QueryBuilder class in search/query.js. I've left inline comments explaining my key decisions.'\n\nFor important decisions, always write them down. 'We decided in the call' is not documentation. A two-paragraph Confluence page that describes what was decided, why, and who was involved is documentation.\n\nProtect your focus time. Schedule blocks for deep work and communicate your availability clearly. 'I'm heads-down until 3 PM — will respond to messages after that' is professional and helps teammates know when to expect a response.",
+    "questions": [
+      "What is the key to writing effective async messages?",
+      "Why is 'we decided in the call' not considered documentation?"
+    ],
+    "answers": [
+      "Provide enough context so the reader does not need follow-up questions to understand the request.",
+      "Because it is not written down, it cannot be found later, and teammates who were not on the call have no access to it."
+    ],
+    "key_phrases": [
+      { "phrase": "Since we're async, I'll write this up so everyone's aligned", "meaning": "Karena kita async, saya akan menuliskan ini agar semua orang selaras" },
+      { "phrase": "I'm heads-down until... — will respond after that", "meaning": "Saya sedang fokus kerja sampai... — akan merespons setelah itu" },
+      { "phrase": "Let me document this decision so future teammates can find it", "meaning": "Biarkan saya mendokumentasikan keputusan ini agar rekan tim di masa depan bisa menemukannya" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Remote Communication Phrases",
+    "items": [
+      { "context": "Writing a clear async message", "phrase": "Here's the full context so you can respond without needing to ask follow-up questions:", "indonesian": "Ini konteks lengkapnya agar kamu bisa merespons tanpa perlu bertanya lebih lanjut:" },
+      { "context": "Setting focus time boundaries", "phrase": "I'll be in deep work mode until 3 PM — I'll get back to all messages after that.", "indonesian": "Saya akan dalam mode kerja fokus hingga pukul 15:00 — saya akan membalas semua pesan setelahnya." },
+      { "context": "Sharing a decision", "phrase": "Quick update for async teammates: we decided to... — full context in the thread below.", "indonesian": "Pembaruan singkat untuk rekan tim async: kami memutuskan untuk... — konteks lengkap di thread di bawah." }
+    ]
+  }
+}

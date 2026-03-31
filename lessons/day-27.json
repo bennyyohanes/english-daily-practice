@@ -1,0 +1,46 @@
+{
+  "day": 27,
+  "title": "Negotiation & Saying No Professionally",
+  "warmup": {
+    "title": "🔥 Negotiation Vocabulary — Day 27",
+    "words": [
+      { "word": "push back", "meaning": "To disagree or resist a request and explain why", "example": "I need to push back on this deadline — it's not realistic." },
+      { "word": "compromise", "meaning": "An agreement reached by each side giving up something", "example": "Let's find a compromise — we'll deliver the MVP by Friday and the full feature next week." },
+      { "word": "non-negotiable", "meaning": "Something that cannot be changed or discussed", "example": "Security testing is non-negotiable — we cannot skip it." },
+      { "word": "alternative", "meaning": "A different option that achieves a similar goal", "example": "If we can't build the full feature, here's an alternative that delivers 80% of the value." },
+      { "word": "bandwidth", "meaning": "The capacity or availability to take on more work (informal)", "example": "I don't have bandwidth for another project this sprint." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Saying No to an Unreasonable Request",
+    "scenario": "Conversation with Your Manager",
+    "context": "Your manager asks you to skip the code review and testing process to deploy a feature by end of day because a sales deal depends on it. You believe skipping these steps would introduce risk — the feature interacts with the payment system. You need to say no, but in a way that shows you understand the business need and proposes an alternative.",
+    "prompt": "Decline the request professionally. Acknowledge the business urgency, explain the risk clearly, and propose a realistic alternative that protects both the business and code quality.",
+    "sample_answer": "I absolutely understand how important this deal is and I want to help you close it. But I need to be honest with you: skipping code review and testing for a change that touches the payment system is a significant risk. If something goes wrong in production — even a small bug — it could freeze all transactions, which would be far worse for the deal than a short delay. Here's what I can offer instead: I'll prioritize this and work on it right now. I can get a code review done in the next 2 hours by asking Sari to review it directly, and I'll run the key test scenarios manually instead of waiting for the full automated suite. If you can give me 3 hours, I can deploy with confidence by 4 PM — with code review and basic testing done. Can we align on that? I don't want to let the deal fall through, but I also can't risk breaking payments."
+  },
+  "reading": {
+    "title": "📖 Reading — The Professional Art of Saying No",
+    "passage": "Saying no is one of the hardest professional skills for developers to master. Many developers say yes to everything, leading to burnout, overcommitment, and resentment. Learning to say no professionally is essential for a sustainable career.\n\nThe key is to never say no to the person — only to the specific request or timeline. 'I cannot help you' closes a door. 'I cannot do this by Friday, but I can do it by Monday with better quality' keeps the relationship open.\n\nAlways explain the why. A no without context sounds dismissive. 'No, I can't do that' sounds obstructive. 'I can't do that by Friday because I'm in the middle of an incident investigation, but here's what I can offer instead' is reasonable and professional.\n\nWhen saying no to a timeline, always offer an alternative. This shows good faith and keeps the conversation moving. 'No' without an alternative leaves your manager with nothing to work with. 'Not by Friday, but by Monday' gives them options.\n\nRemember: saying no when you need to protects the quality of your work and the reliability of your commitments. A developer who never says no will eventually say yes to something that causes a major incident.",
+    "questions": [
+      "What is the key principle when saying no professionally?",
+      "Why should you always offer an alternative when declining a request?"
+    ],
+    "answers": [
+      "Never say no to the person — only to the specific request or timeline. Keep the relationship open.",
+      "It shows good faith and gives your manager options to work with instead of leaving them with nothing."
+    ],
+    "key_phrases": [
+      { "phrase": "I understand the urgency, but I need to be honest about the risk", "meaning": "Saya memahami urgensinya, tapi saya perlu jujur tentang risikonya" },
+      { "phrase": "Skipping this step would introduce risk because...", "meaning": "Melewati langkah ini akan memperkenalkan risiko karena..." },
+      { "phrase": "Here's what I can offer instead...", "meaning": "Ini yang bisa saya tawarkan sebagai gantinya..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Professional Pushback Phrases",
+    "items": [
+      { "context": "Declining a request respectfully", "phrase": "I want to help with this, but I need to push back on the timeline — here's why.", "indonesian": "Saya ingin membantu dengan ini, tapi saya perlu menolak jadwalnya — ini alasannya." },
+      { "context": "Offering an alternative", "phrase": "I can't deliver this by Friday, but I can have it done by Monday with full testing.", "indonesian": "Saya tidak bisa mengantarkan ini pada hari Jumat, tapi saya bisa menyelesaikannya pada hari Senin dengan pengujian penuh." },
+      { "context": "Explaining the risk", "phrase": "The risk of rushing this is... — I don't want us to end up in a worse situation.", "indonesian": "Risiko terburu-buru dengan ini adalah... — saya tidak ingin kita berakhir dalam situasi yang lebih buruk." }
+    ]
+  }
+}

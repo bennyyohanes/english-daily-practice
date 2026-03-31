@@ -1,0 +1,46 @@
+{
+  "day": 15,
+  "title": "Mentoring & Explaining Concepts",
+  "warmup": {
+    "title": "🔥 Mentoring Vocabulary — Day 15",
+    "words": [
+      { "word": "analogy", "meaning": "A comparison between two different things to explain a concept", "example": "Think of an API like a restaurant menu — it shows you what's available without showing you the kitchen." },
+      { "word": "walk through", "meaning": "To explain something step by step", "example": "Let me walk you through how this function works." },
+      { "word": "fundamentals", "meaning": "The basic, essential concepts of a subject", "example": "Before learning frameworks, make sure you understand the fundamentals of JavaScript." },
+      { "word": "mentor", "meaning": "An experienced person who guides and advises a less experienced person", "example": "My mentor helped me understand clean code principles." },
+      { "word": "unblock", "meaning": "To remove an obstacle so someone can continue their work", "example": "I spent an hour unblocking a junior dev who was stuck on a Git conflict." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Explaining a Technical Concept",
+    "scenario": "Explaining REST APIs to a New Team Member",
+    "context": "A new team member named Wulan just joined. She has a design background and is transitioning to front-end development. She asked you: 'I keep seeing "API" in the tickets — what exactly is a REST API and why do we use it?' You need to explain it clearly without overwhelming her with technical jargon.",
+    "prompt": "Explain what a REST API is to Wulan using simple language and an analogy. Make it practical and relatable.",
+    "sample_answer": "Great question! Think of an API like a waiter at a restaurant. You are the customer (the frontend), the kitchen is the server where all the data lives, and the waiter is the API. You don't go into the kitchen yourself — you tell the waiter what you want, the waiter goes to the kitchen and brings back what you ordered. A REST API is a specific style of waiter that speaks in a standard language using URLs and HTTP methods. For example, to get a list of users, you send a GET request to /api/users. To create a new user, you send a POST request. The server responds with data in JSON format, which looks like a structured list of key-value pairs. We use REST APIs because it separates the frontend from the backend — you and I can work on them independently, and we just agree on the API contract between us. Does that make sense?"
+  },
+  "reading": {
+    "title": "📖 Reading — The Mentor Mindset",
+    "passage": "Mentoring junior developers is one of the most impactful things a senior engineer can do. But good mentoring is a skill, and many experienced developers are surprisingly bad at it.\n\nThe most common mentoring mistake is simply giving the answer. When a junior asks 'Why is my code not working?', the temptation is to look at it, fix it, and say 'There you go.' This solves their problem today but teaches them nothing.\n\nBetter mentoring involves guided discovery. Instead of fixing the code, ask questions: 'What do you think this variable contains at this point?' 'What does the error message say?' 'What have you tried so far?' This trains them to think systematically.\n\nWhen explaining a concept, check for understanding. Do not just explain and walk away. Ask them to explain it back to you in their own words. If they can explain it clearly, they understand it. If they struggle, you know which part to clarify.\n\nRemember: the goal of mentoring is to make yourself unnecessary. A good mentor's success is measured by how capable and independent their mentee becomes.",
+    "questions": [
+      "What is the most common mentoring mistake and why is it problematic?",
+      "How do you check if someone truly understood your explanation?"
+    ],
+    "answers": [
+      "Simply giving the answer. It solves the immediate problem but teaches nothing — the mentee does not learn how to solve it themselves.",
+      "Ask them to explain the concept back to you in their own words."
+    ],
+    "key_phrases": [
+      { "phrase": "Let me walk you through this step by step", "meaning": "Biarkan saya menjelaskan ini langkah demi langkah" },
+      { "phrase": "Think of it like...", "meaning": "Bayangkan seperti..." },
+      { "phrase": "Does that make sense? Can you explain it back to me?", "meaning": "Apakah itu masuk akal? Bisakah kamu jelaskan kembali padaku?" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Mentoring & Teaching Phrases",
+    "items": [
+      { "context": "Starting an explanation", "phrase": "Let me walk you through how this works — it's actually simpler than it looks.", "indonesian": "Biarkan saya jelaskan cara kerjanya — sebenarnya lebih sederhana dari yang terlihat." },
+      { "context": "Using an analogy", "phrase": "A good way to think about this is like... — does that analogy make sense?", "indonesian": "Cara yang baik untuk memikirkan ini adalah seperti... — apakah analogi itu masuk akal?" },
+      { "context": "Guiding instead of solving", "phrase": "Before I show you the answer, what do you think might be causing the issue?", "indonesian": "Sebelum saya tunjukkan jawabannya, apa menurutmu yang mungkin menyebabkan masalah ini?" }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "day": 9,
+  "title": "Writing & Explaining Error Messages",
+  "warmup": {
+    "title": "🔥 Error Vocabulary — Day 9",
+    "words": [
+      { "word": "exception", "meaning": "An error that disrupts the normal flow of a program", "example": "A NullPointerException was thrown when the user object was not found." },
+      { "word": "timeout", "meaning": "When a process takes too long and is automatically stopped", "example": "The API request timed out after 30 seconds." },
+      { "word": "validation error", "meaning": "An error caused by invalid or unexpected input data", "example": "The form returned a validation error because the email format was wrong." },
+      { "word": "unauthorized", "meaning": "A 401 error — the user is not authenticated or their token is invalid", "example": "The API returns 401 unauthorized when the session expires." },
+      { "word": "forbidden", "meaning": "A 403 error — the user is authenticated but not allowed to access this resource", "example": "Regular users get a 403 forbidden when trying to access the admin panel." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Explaining an Error to a Non-Technical Teammate",
+    "scenario": "Explaining a Bug to a Customer Support Agent",
+    "context": "A customer support agent named Maya contacts you. A customer reported that they keep seeing 'Error 403: Access Denied' when trying to view their invoices. Maya doesn't know what 403 means and needs to explain it to the customer. She asks you: 'What does this 403 error mean and why is the customer seeing it?'",
+    "prompt": "Explain the 403 error to Maya in simple, non-technical language so she can communicate it to the customer. Also suggest what the customer should do.",
+    "sample_answer": "Great question, Maya! A 403 error means 'Access Denied' — the system knows who the customer is, but it's not allowing them to see that page. It's like having a building keycard that opens the front door, but not a specific office inside. In this case, I checked their account and it looks like their subscription plan doesn't include invoice history — that's a premium feature. So the system is correctly blocking access. You can tell the customer that their current plan doesn't include this feature, and if they want to access invoices, they'll need to upgrade to the Pro plan. I'll also add a clearer error message so it says 'Upgrade your plan to view invoices' instead of just showing a generic 403."
+  },
+  "reading": {
+    "title": "📖 Reading — User-Friendly Error Messages",
+    "passage": "Error messages are a user experience problem as much as a technical one. A poorly written error message leaves users confused and frustrated. A good error message tells users what went wrong, why it happened, and what they can do about it.\n\nConsider these two error messages: (1) 'Error 500: Internal Server Error' vs. (2) 'Something went wrong on our end. Your order was not placed. Please try again or contact support at help@example.com.'\n\nThe second message is far better. It acknowledges the problem, clarifies that the user's action did not complete, and gives them a clear next step.\n\nAs a developer, you are responsible for the error messages in your code. When writing error handling, ask yourself: if a non-technical user reads this message, will they know what to do next? If the answer is no, rewrite it.\n\nAvoid technical jargon like 'NullPointerException' or 'ECONNREFUSED' in user-facing messages. Save the technical details for logs.",
+    "questions": [
+      "What three things should a good error message tell the user?",
+      "Why should you avoid technical jargon in user-facing error messages?"
+    ],
+    "answers": [
+      "What went wrong, why it happened, and what they can do about it.",
+      "Because non-technical users won't understand it and won't know what to do next."
+    ],
+    "key_phrases": [
+      { "phrase": "That error means...", "meaning": "Error itu berarti..." },
+      { "phrase": "In simple terms, what's happening is...", "meaning": "Dalam bahasa sederhana, yang terjadi adalah..." },
+      { "phrase": "The user should try...", "meaning": "Pengguna sebaiknya mencoba..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Error Explanation Phrases",
+    "items": [
+      { "context": "Explaining a technical error simply", "phrase": "In simple terms, that error means the server couldn't process the request.", "indonesian": "Dalam bahasa sederhana, error itu berarti server tidak bisa memproses permintaan tersebut." },
+      { "context": "Explaining the cause", "phrase": "This is happening because the user's session expired and they need to log in again.", "indonesian": "Ini terjadi karena sesi pengguna sudah kadaluarsa dan mereka perlu login kembali." },
+      { "context": "Suggesting a fix", "phrase": "The customer should clear their browser cache and try again.", "indonesian": "Pelanggan sebaiknya membersihkan cache browser mereka dan mencoba lagi." }
+    ]
+  }
+}

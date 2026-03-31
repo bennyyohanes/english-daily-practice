@@ -1,0 +1,46 @@
+{
+  "day": 11,
+  "title": "Giving a Code Review",
+  "warmup": {
+    "title": "🔥 Code Review Vocabulary — Day 11",
+    "words": [
+      { "word": "pull request", "meaning": "A request to merge code changes from one branch into another", "example": "I submitted a pull request for the auth feature — can you review it?" },
+      { "word": "nit", "meaning": "A minor, non-blocking code style suggestion (short for nitpick)", "example": "Nit: you could rename this variable to be more descriptive." },
+      { "word": "blocking", "meaning": "A review comment that must be resolved before the PR can be merged", "example": "This is a blocking issue — it will cause a SQL injection vulnerability." },
+      { "word": "approve", "meaning": "To formally accept a pull request as ready to merge", "example": "LGTM — I'll approve this PR." },
+      { "word": "refactor", "meaning": "To restructure existing code without changing its behavior", "example": "This method is too long — can you refactor it into smaller functions?" }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Delivering Code Review Feedback",
+    "scenario": "Synchronous Code Review with a Junior Developer",
+    "context": "You are reviewing a pull request from a junior developer named Budi. His code works, but you noticed three things: (1) A function is 80 lines long and does too many things. (2) There are no unit tests for the new logic. (3) A variable is named 'x' which is unclear. The overall PR is good and shows effort, but these issues should be addressed.",
+    "prompt": "Give Budi your code review feedback. Be constructive and encouraging, not harsh. Address all three issues clearly.",
+    "sample_answer": "Hey Budi, great work on this — the overall logic is solid and I can see you put a lot of thought into the implementation. I have a few suggestions before we merge. First, the processOrder function is about 80 lines and handles quite a few different things — it would be easier to maintain if we split it into smaller functions, like one for validation, one for calculating totals, and one for sending the confirmation. Second, this new discount calculation logic is a core part of the business — could you add unit tests for it? Especially for edge cases like 100% discount or negative values. And finally, a small nit: could you rename the variable 'x' to something like 'discountAmount'? It makes the code much more readable. Overall this is really close — address these and it's good to merge!"
+  },
+  "reading": {
+    "title": "📖 Reading — The Principles of Great Code Reviews",
+    "passage": "Code review is one of the most powerful tools for improving code quality and spreading knowledge across a team. But a bad code review can be demoralizing and counterproductive.\n\nThe golden rule of code review: review the code, not the person. Never say 'you wrote bad code.' Instead, say 'this function could be simplified by...' or 'I noticed a potential issue with...'\n\nDistinguish between blocking issues and suggestions. A security vulnerability is blocking — the PR cannot merge until it is fixed. A style preference is a nit — it is optional and the author can choose to address it or not.\n\nAsk questions instead of making demands. 'What do you think about extracting this into a helper function?' is better than 'Extract this into a helper function.'\n\nAlways acknowledge what is done well. Starting a review with only criticism is discouraging. If someone wrote good code, say so. 'The test coverage here is excellent' goes a long way.",
+    "questions": [
+      "What is the golden rule of code review?",
+      "What is the difference between a blocking issue and a nit?"
+    ],
+    "answers": [
+      "Review the code, not the person. Focus on the code itself, not on criticizing the author.",
+      "A blocking issue must be resolved before merging. A nit is a minor suggestion that is optional."
+    ],
+    "key_phrases": [
+      { "phrase": "Great work overall — just a few suggestions", "meaning": "Kerja bagus secara keseluruhan — hanya beberapa saran" },
+      { "phrase": "This is a blocking issue — we need to fix this before merging", "meaning": "Ini masalah yang harus diselesaikan sebelum merge" },
+      { "phrase": "Nit: could you rename this to...?", "meaning": "Saran kecil: bisakah kamu ganti namanya menjadi...?" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Code Review Phrases",
+    "items": [
+      { "context": "Starting a positive review", "phrase": "Nice work on this! The logic is clean and easy to follow.", "indonesian": "Kerja bagus! Logikanya bersih dan mudah diikuti." },
+      { "context": "Giving constructive feedback", "phrase": "Could you consider breaking this function into smaller pieces? It would make it easier to test.", "indonesian": "Bisakah kamu mempertimbangkan untuk memecah fungsi ini menjadi bagian-bagian lebih kecil? Itu akan membuatnya lebih mudah diuji." },
+      { "context": "Flagging a critical issue", "phrase": "This is a blocking issue — this approach could expose user data. We need to address this before merging.", "indonesian": "Ini masalah kritis — pendekatan ini bisa mengekspos data pengguna. Kita perlu mengatasi ini sebelum merge." }
+    ]
+  }
+}

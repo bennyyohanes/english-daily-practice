@@ -1,0 +1,46 @@
+{
+  "day": 29,
+  "title": "Career Conversations & 1-on-1s",
+  "warmup": {
+    "title": "🔥 Career Development Vocabulary — Day 29",
+    "words": [
+      { "word": "growth area", "meaning": "A skill or capability you want to develop further", "example": "My main growth area this year is system design and architecture." },
+      { "word": "feedback", "meaning": "Information about your performance to help you improve", "example": "I'd appreciate feedback on my communication skills in meetings." },
+      { "word": "ownership", "meaning": "Taking full responsibility for a task, project, or outcome", "example": "I want to take ownership of the migration project end to end." },
+      { "word": "visibility", "meaning": "Being seen and recognized for your work and contributions", "example": "I want more visibility — I'd like to present at the next all-hands meeting." },
+      { "word": "senior engineer", "meaning": "An experienced engineer with deep technical skills and leadership qualities", "example": "My goal is to be promoted to senior engineer within 18 months." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Career 1-on-1 with Your Manager",
+    "scenario": "Monthly 1-on-1 with Your Engineering Manager",
+    "context": "It is your monthly 1-on-1. You want to discuss three things: (1) You are proud of the performance investigation work you did this sprint. (2) You want more challenging projects — you feel your current tasks are too routine. (3) You want feedback on your communication skills — you sometimes struggle to speak up in large meetings.",
+    "prompt": "Have a productive 1-on-1 conversation. Share your wins, express your desire for growth, and ask for feedback constructively.",
+    "sample_answer": "Thanks for making time! I have a few things I'd like to cover today. First, I'm really proud of the performance investigation I did this sprint — I identified the root cause, fixed two issues, and brought the dashboard load time from 12 seconds to under 1 second. I think it shows my growth in debugging and database optimization. Second, I'd like to have a conversation about challenge. I feel like my tasks lately have been quite routine — mostly bug fixes and small features. I'm ready for more complex work — could we discuss me taking on a more significant technical project next quarter? Something with more design and architecture involvement? And third, I'd love some feedback on my communication in team meetings. I notice I sometimes hold back when there are senior people in the room, even when I have a relevant perspective. What advice would you give me on being more assertive? I want to work on that."
+  },
+  "reading": {
+    "title": "📖 Reading — How to Have Effective 1-on-1s",
+    "passage": "A 1-on-1 meeting is one of the most important conversations in a developer's career. It is a dedicated time for you and your manager to align, discuss your growth, and address concerns. But many developers waste these meetings by having no agenda or just giving a status update.\n\nCome prepared. Think about what you want to discuss before the meeting. Wins you are proud of, challenges you are facing, growth areas you want to develop, feedback you want to give or receive.\n\nDo not just talk about work status. Your manager can read your Jira board. Use this time for things that cannot be tracked in a ticket: your career aspirations, how you feel about the team culture, ideas for improvement.\n\nAsk for feedback proactively. Do not wait for your annual performance review to find out how you are doing. Ask specifically: 'Is there one thing I could do differently to be more effective in my role?' Specific questions get specific answers.\n\nThe best 1-on-1s are a two-way conversation, not a report. If you find yourself just answering your manager's questions, ask some of your own. 'What do you see as the biggest opportunity for me in the next 6 months?' puts your growth on the agenda.",
+    "questions": [
+      "Why should you not just give a status update in a 1-on-1?",
+      "What is one specific question you can ask your manager to get useful feedback?"
+    ],
+    "answers": [
+      "Your manager can already see your work status in Jira. Use 1-on-1s for career growth, culture, and conversations that cannot be tracked.",
+      "Is there one thing I could do differently to be more effective in my role? Specific questions get specific answers."
+    ],
+    "key_phrases": [
+      { "phrase": "I'm proud of what I accomplished this sprint — here's why", "meaning": "Saya bangga dengan apa yang saya capai di sprint ini — ini alasannya" },
+      { "phrase": "I'd like to discuss my growth — I'm looking for more challenge", "meaning": "Saya ingin mendiskusikan pertumbuhan saya — saya mencari lebih banyak tantangan" },
+      { "phrase": "I'd appreciate your feedback on...", "meaning": "Saya sangat menghargai masukan Anda tentang..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ 1-on-1 Career Phrases",
+    "items": [
+      { "context": "Sharing a win", "phrase": "I'm proud of this one — I think it shows real growth in my debugging skills.", "indonesian": "Saya bangga dengan ini — saya rasa ini menunjukkan pertumbuhan nyata dalam keterampilan debugging saya." },
+      { "context": "Asking for growth opportunities", "phrase": "I feel ready for more challenging work — could we discuss what that might look like?", "indonesian": "Saya merasa siap untuk pekerjaan yang lebih menantang — bisakah kita diskusikan seperti apa itu?" },
+      { "context": "Asking for feedback", "phrase": "Is there one specific thing I could improve to be more effective in my role?", "indonesian": "Apakah ada satu hal spesifik yang bisa saya tingkatkan untuk lebih efektif dalam peran saya?" }
+    ]
+  }
+}

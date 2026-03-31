@@ -1,0 +1,46 @@
+{
+  "day": 2,
+  "title": "Reporting Progress in Meetings",
+  "warmup": {
+    "title": "🔥 Progress Vocabulary — Day 2",
+    "words": [
+      { "word": "on track", "meaning": "Making progress as expected, no delays", "example": "The feature is on track for Friday's release." },
+      { "word": "behind schedule", "meaning": "Running late compared to the planned timeline", "example": "We are behind schedule due to unexpected API issues." },
+      { "word": "milestone", "meaning": "An important point or goal in a project", "example": "We hit a major milestone by completing the authentication module." },
+      { "word": "deliverable", "meaning": "A specific output or result to be completed by a deadline", "example": "The main deliverable for this sprint is the checkout flow." },
+      { "word": "estimate", "meaning": "A rough calculation of time or effort needed", "example": "My estimate for this task is about three days." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Progress Report",
+    "scenario": "Weekly Sprint Review",
+    "context": "Your sprint ends on Friday. Your project manager asks: \"Can you give us a quick update on where things stand with the payment integration?\" You have finished the backend API (100%), the frontend form (80%), and testing has not started yet. You expect to finish everything by Thursday.",
+    "prompt": "Report your progress clearly. Use percentages or status words. Mention what is done, what is in progress, and give a completion estimate.",
+    "sample_answer": "Sure! The backend API for payment integration is fully done — 100% complete and already merged. The frontend form is about 80% done, I just need to add form validation. Testing hasn't started yet, but I'm planning to start that tomorrow. Overall, I'm on track to have everything wrapped up by Thursday."
+  },
+  "reading": {
+    "title": "📖 Reading — Effective Progress Updates",
+    "passage": "Giving a clear progress update is a critical communication skill for developers. A good update tells stakeholders exactly where a project stands without burying them in technical details.\n\nThe best progress reports use concrete numbers and clear status indicators. Instead of saying \"I've been working on it,\" say \"I'm 70% done.\" Instead of \"There are some issues,\" say \"I found two bugs that will add one day to the timeline.\"\n\nAlways distinguish between what is complete, what is in progress, and what has not started. This three-part structure helps your audience understand the full picture instantly.\n\nEnd your update with a clear completion date or a revised estimate. If you are behind schedule, say so early — your team needs time to adjust plans. Surprises are bad; transparency is good.",
+    "questions": [
+      "What should you say instead of 'I've been working on it'?",
+      "What three parts should a good progress report include?"
+    ],
+    "answers": [
+      "Use concrete numbers like 'I'm 70% done' to be specific.",
+      "What is complete, what is in progress, and what has not started."
+    ],
+    "key_phrases": [
+      { "phrase": "We're on track for...", "meaning": "Kita sesuai jadwal untuk..." },
+      { "phrase": "I'm about 80% done", "meaning": "Saya sudah selesai sekitar 80%" },
+      { "phrase": "I expect to finish by...", "meaning": "Saya perkirakan selesai pada..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Progress Reporting Phrases",
+    "items": [
+      { "context": "Reporting good news", "phrase": "We're on track — should be done by end of week.", "indonesian": "Kita sesuai jadwal — seharusnya selesai akhir minggu ini." },
+      { "context": "Reporting a delay", "phrase": "We're slightly behind schedule due to some unexpected issues.", "indonesian": "Kita sedikit terlambat karena ada masalah yang tidak terduga." },
+      { "context": "Giving a percentage", "phrase": "The feature is about 60% complete at this point.", "indonesian": "Fitur ini sudah selesai sekitar 60% sampai saat ini." }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "day": 14,
+  "title": "Discussing Code Architecture",
+  "warmup": {
+    "title": "🔥 Architecture Vocabulary — Day 14",
+    "words": [
+      { "word": "abstraction", "meaning": "Hiding complex implementation details behind a simple interface", "example": "The payment module provides a clean abstraction so the rest of the app doesn't need to know which payment provider is used." },
+      { "word": "coupling", "meaning": "The degree to which components depend on each other", "example": "High coupling makes it hard to change one service without breaking others." },
+      { "word": "separation of concerns", "meaning": "The principle that each part of the code should handle one specific responsibility", "example": "We should apply separation of concerns — the controller should not contain business logic." },
+      { "word": "interface", "meaning": "A defined contract specifying how components communicate", "example": "We designed a standard interface so any payment provider can be swapped in." },
+      { "word": "scalability", "meaning": "The ability of a system to handle increased load without degradation", "example": "The current architecture doesn't scale — we'll have issues at 1 million users." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Architecture Discussion",
+    "scenario": "Technical Design Discussion with Senior Engineer",
+    "context": "You are building a notification system. You have a choice: Option A — build it directly into the main app, which is faster but creates tight coupling. Option B — build it as a separate microservice, which takes longer but is more scalable and maintainable. Your senior engineer asks for your recommendation.",
+    "prompt": "Present your recommendation with reasoning. Compare the two options and explain the trade-offs before giving your final recommendation.",
+    "sample_answer": "I've thought about both options and I'd recommend Option B — the separate microservice. Here's my thinking. Option A is faster in the short term, maybe 3 days versus 7, but it tightly couples the notification logic to the main app. Every time we add a new notification type, we touch the core application, which increases the risk of regressions. Option B takes more upfront investment, but the notification service becomes independently deployable and testable. We can scale it separately if notification volume spikes, and we can swap out the notification provider without touching the main app. Given that we're planning to expand our notification system significantly in the next quarter, I think the upfront cost is justified. That said, I'm open to discussion — am I missing any constraints that would make Option A the better choice?"
+  },
+  "reading": {
+    "title": "📖 Reading — How to Discuss Architecture Trade-offs",
+    "passage": "Every architectural decision involves trade-offs. There is rarely a perfect solution — only solutions that are better or worse for your specific context. The best engineers are those who can articulate trade-offs clearly and make decisions that are right for their situation.\n\nWhen presenting an architectural recommendation, structure your discussion around: (1) The problem you are trying to solve. (2) The options you considered. (3) The trade-offs of each option. (4) Your recommendation and the reasoning behind it.\n\nAvoid the trap of 'we should do it this way because it's best practice.' Best practices exist in a context. A microservices architecture is a best practice for large teams with complex domains, but it's overkill for a 3-person startup.\n\nAlso avoid the trap of falling in love with your design. Present your recommendation clearly but be genuinely open to feedback. A good architecture emerges from collaborative discussion, not from one person's vision.",
+    "questions": [
+      "What four things should you cover when presenting an architectural recommendation?",
+      "Why is 'it's a best practice' not a good enough justification?"
+    ],
+    "answers": [
+      "The problem you are solving, the options considered, the trade-offs of each option, and your recommendation with reasoning.",
+      "Best practices depend on context. What works for a large company may be overkill for a small team."
+    ],
+    "key_phrases": [
+      { "phrase": "Here are the trade-offs of each approach", "meaning": "Ini adalah kelebihan dan kekurangan dari setiap pendekatan" },
+      { "phrase": "I'd recommend... and here's my reasoning", "meaning": "Saya merekomendasikan... dan ini alasannya" },
+      { "phrase": "I'm open to other perspectives on this", "meaning": "Saya terbuka untuk perspektif lain mengenai ini" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Architecture Discussion Phrases",
+    "items": [
+      { "context": "Presenting options", "phrase": "We have two main options here, each with different trade-offs.", "indonesian": "Kita punya dua opsi utama di sini, masing-masing dengan pertukaran yang berbeda." },
+      { "context": "Making a recommendation", "phrase": "Based on our requirements, I'd recommend Option B because it gives us better scalability.", "indonesian": "Berdasarkan persyaratan kita, saya merekomendasikan Opsi B karena memberikan skalabilitas yang lebih baik." },
+      { "context": "Inviting discussion", "phrase": "That's my recommendation — what do others think? Am I missing any constraints?", "indonesian": "Itulah rekomendasi saya — apa pendapat yang lain? Apakah saya melewatkan batasan apapun?" }
+    ]
+  }
+}
