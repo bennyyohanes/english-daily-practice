@@ -40,6 +40,18 @@ function checkAuth() {
 let currentDay = 1;
 const TOTAL_DAYS = 30;
 
+// Day 1 = 01-04-2026
+const START_DATE = new Date(2026, 3, 1); // April 1, 2026
+
+function getDayDate(day) {
+  const d = new Date(START_DATE);
+  d.setDate(START_DATE.getDate() + (day - 1));
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const yyyy = d.getFullYear();
+  return `${dd}-${mm}-${yyyy}`;
+}
+
 function initApp() {
   const savedDay = parseInt(localStorage.getItem('currentDay') || '1', 10);
   currentDay = Math.min(Math.max(savedDay, 1), TOTAL_DAYS);
@@ -80,7 +92,7 @@ function renderLesson(lesson, day) {
   if (!el('current-day')) return;
 
   el('current-day').textContent = day;
-  el('nav-day').textContent = day;
+  el('nav-day').textContent = getDayDate(day);
   el('lesson-title').textContent = `Day ${day}: ${lesson.title}`;
   const pct = (day / TOTAL_DAYS) * 100;
   el('progress-bar').style.width = pct + '%';
@@ -149,8 +161,13 @@ function renderLesson(lesson, day) {
     </div>
   `).join('');
 
-  el('prev-btn').disabled = day <= 1;
-  el('next-btn').disabled = day >= TOTAL_DAYS;
+  // Update nav buttons with dates
+  const prevBtn = el('prev-btn');
+  const nextBtn = el('next-btn');
+  prevBtn.disabled = day <= 1;
+  nextBtn.disabled = day >= TOTAL_DAYS;
+  prevBtn.textContent = day > 1 ? `← ${getDayDate(day - 1)}` : '← Previous Day';
+  nextBtn.textContent = day < TOTAL_DAYS ? `${getDayDate(day + 1)} →` : 'Next Day →';
 }
 
 function toggleAnswer(btn) {
