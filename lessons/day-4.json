@@ -1,0 +1,46 @@
+{
+  "day": 4,
+  "title": "Discussing Deadlines & Timelines",
+  "warmup": {
+    "title": "🔥 Timeline Vocabulary — Day 4",
+    "words": [
+      { "word": "deadline", "meaning": "The latest date or time by which something must be finished", "example": "The deadline for the MVP is the end of this month." },
+      { "word": "sprint", "meaning": "A fixed time period (usually 2 weeks) to complete a set of tasks", "example": "We only have 3 days left in this sprint." },
+      { "word": "push back", "meaning": "To delay or reschedule to a later date", "example": "We may need to push back the release by one week." },
+      { "word": "priority", "meaning": "The level of importance given to a task or issue", "example": "Security fixes are always the highest priority." },
+      { "word": "capacity", "meaning": "The amount of work a person or team can handle", "example": "We don't have capacity to add more features this sprint." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Negotiating a Deadline",
+    "scenario": "Sprint Planning with Tech Lead",
+    "context": "Your tech lead wants you to finish both the user profile feature AND the settings page by this Friday. But you estimate the profile feature alone will take until Friday. You need to explain your capacity and propose a realistic alternative timeline.",
+    "prompt": "Tell your tech lead that you cannot finish both tasks by Friday. Be honest, explain your estimate, and suggest a solution (e.g., which task to prioritize, or a new date for the second task).",
+    "sample_answer": "I want to be transparent about the timeline. The user profile feature is more complex than it looks — I estimate it'll take me until Friday to finish it properly, including testing. If I also take on the settings page, I won't be able to do either one well. I'd recommend we prioritize the profile feature for this sprint since it's a dependency for other tickets, and move the settings page to next sprint. Does that work for you?"
+  },
+  "reading": {
+    "title": "📖 Reading — How to Talk About Deadlines",
+    "passage": "Deadlines are a constant reality in software development. Learning to discuss them professionally — especially when things go wrong — is an essential skill.\n\nThe worst thing you can do is stay silent when you know you will miss a deadline. Surprises destroy trust. If you realize on Wednesday that you cannot finish by Friday, tell your team on Wednesday — not on Friday afternoon.\n\nWhen communicating a delay, always provide three things: (1) the current status, (2) the reason for the delay, and (3) a revised estimate. Don't just say 'I'm not going to finish on time.' Say 'I'm about 70% done. I found a complex edge case in the payment flow that will take an extra day. I can have it ready by Monday.'\n\nRemember: being realistic about timelines is a mark of a senior engineer. Junior developers often over-promise and under-deliver. Senior engineers give accurate estimates and communicate problems early.",
+    "questions": [
+      "What three things should you provide when communicating a delay?",
+      "Why is over-promising considered a junior developer mistake?"
+    ],
+    "answers": [
+      "The current status, the reason for the delay, and a revised estimate.",
+      "Because it leads to under-delivering, which destroys trust. Senior engineers give accurate estimates."
+    ],
+    "key_phrases": [
+      { "phrase": "I want to be transparent about the timeline", "meaning": "Saya ingin jujur mengenai jadwalnya" },
+      { "phrase": "I estimate this will take...", "meaning": "Saya perkirakan ini akan membutuhkan waktu..." },
+      { "phrase": "Can we push the deadline to...?", "meaning": "Bisakah kita menggeser deadline ke...?" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Deadline Discussion Phrases",
+    "items": [
+      { "context": "Flagging a potential delay", "phrase": "I want to flag that this might take longer than expected.", "indonesian": "Saya ingin memberi tahu bahwa ini mungkin butuh waktu lebih lama dari perkiraan." },
+      { "context": "Proposing a new deadline", "phrase": "Could we move this to next Wednesday? That gives me enough time to do it properly.", "indonesian": "Bisakah kita pindahkan ke Rabu depan? Itu memberi saya cukup waktu untuk mengerjakannya dengan baik." },
+      { "context": "Discussing priorities", "phrase": "Which task should I prioritize if I can only finish one this sprint?", "indonesian": "Tugas mana yang harus saya prioritaskan jika saya hanya bisa menyelesaikan satu sprint ini?" }
+    ]
+  }
+}

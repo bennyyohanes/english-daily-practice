@@ -1,0 +1,46 @@
+{
+  "day": 1,
+  "title": "Daily Stand-Up Basics",
+  "warmup": {
+    "title": "🔥 Meeting Vocabulary — Day 1",
+    "words": [
+      { "word": "stand-up", "meaning": "Short daily team meeting (usually 15 minutes)", "example": "We have a stand-up every morning at 9 AM." },
+      { "word": "blocker", "meaning": "Something that prevents you from making progress", "example": "I have a blocker — I can't access the staging server." },
+      { "word": "update", "meaning": "Brief report on what you are working on", "example": "Let me give you an update on the login feature." },
+      { "word": "in progress", "meaning": "Currently being worked on", "example": "The API integration is still in progress." },
+      { "word": "done", "meaning": "Completed and finished", "example": "The unit tests are done and all passing." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Your First Stand-Up",
+    "scenario": "Morning Stand-Up Meeting",
+    "context": "It is 9:00 AM. Your team is on a video call for the daily stand-up. Your tech lead asks: \"Okay everyone, let's start. Who wants to go first?\" You decide to share your update. Yesterday you fixed a CSS bug on the homepage. Today you will start working on the user profile page. You have no blockers.",
+    "prompt": "How do you give your stand-up update? Speak for about 30 seconds covering: what you did yesterday, what you will do today, and any blockers.",
+    "sample_answer": "Sure, I'll go first! Yesterday I fixed the CSS alignment bug on the homepage — it's now deployed to staging. Today I'm planning to start on the user profile page, specifically the avatar upload feature. No blockers on my end. That's it from me!"
+  },
+  "reading": {
+    "title": "📖 Reading — The Art of the Stand-Up",
+    "passage": "The daily stand-up is one of the most important rituals in agile software development. It is a short, focused meeting where each team member answers three questions: What did I do yesterday? What will I do today? Are there any blockers?\n\nThe key to a good stand-up is brevity. Each person should speak for no more than two minutes. The goal is not to have a deep technical discussion — those conversations should happen after the meeting with only the relevant people.\n\nGood stand-ups keep the whole team aligned. When you hear that a teammate is working on something related to your task, you can coordinate immediately. Blockers get surfaced quickly so the team lead can help remove them.\n\nRemember: the stand-up is for the team, not for the manager. Speak to your teammates, not just to your boss.",
+    "questions": [
+      "What are the three questions each person answers in a stand-up?",
+      "How long should each person speak during a stand-up?"
+    ],
+    "answers": [
+      "What did I do yesterday, what will I do today, and are there any blockers?",
+      "No more than two minutes per person."
+    ],
+    "key_phrases": [
+      { "phrase": "Let me give you an update", "meaning": "Saya ingin berbagi perkembangan terbaru" },
+      { "phrase": "No blockers on my end", "meaning": "Tidak ada hambatan dari sisi saya" },
+      { "phrase": "I'll go first", "meaning": "Saya duluan / saya yang mulai" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Stand-Up Phrases to Use Today",
+    "items": [
+      { "context": "Starting your update", "phrase": "Yesterday I worked on... Today I'm planning to...", "indonesian": "Kemarin saya mengerjakan... Hari ini saya berencana untuk..." },
+      { "context": "Reporting a blocker", "phrase": "I'm blocked by... — could someone help me with this?", "indonesian": "Saya terhambat oleh... — bisakah seseorang membantu saya?" },
+      { "context": "Finishing your update", "phrase": "That's all from me. No blockers.", "indonesian": "Sekian dari saya. Tidak ada hambatan." }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "day": 19,
+  "title": "Writing Technical Documentation",
+  "warmup": {
+    "title": "🔥 Documentation Vocabulary — Day 19",
+    "words": [
+      { "word": "README", "meaning": "A file that explains what a project is, how to set it up, and how to use it", "example": "The README explains how to install and run the project locally." },
+      { "word": "changelog", "meaning": "A file that records all notable changes between versions", "example": "Check the changelog to see what was added in version 2.0." },
+      { "word": "endpoint", "meaning": "A specific URL in an API that accepts requests", "example": "The POST /api/users endpoint creates a new user account." },
+      { "word": "parameter", "meaning": "A variable passed to a function or API endpoint", "example": "The search endpoint accepts a query parameter for filtering results." },
+      { "word": "deprecated", "meaning": "A feature that is outdated and will be removed in a future version", "example": "This API endpoint is deprecated — please use /api/v2/users instead." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Explaining Your API Documentation",
+    "scenario": "Onboarding a New Frontend Developer",
+    "context": "A new frontend developer, Tara, just joined the team. She needs to integrate with the backend API you wrote. You created documentation for it, but it's her first time using it. You are walking her through the key endpoints she will use to build the user management screens.",
+    "prompt": "Walk Tara through the API documentation for the user management endpoints. Explain the base URL, authentication, and at least two key endpoints.",
+    "sample_answer": "Welcome to the API! Let me walk you through the basics. The base URL is https://api.yourapp.com/v2 — always use v2, v1 is deprecated. For authentication, every request needs an Authorization header with a Bearer token. You'll get the token by calling POST /auth/login with an email and password in the body — it returns a JWT. For user management, you'll mainly use two endpoints. First, GET /users returns a paginated list of all users. You can filter by role using a query parameter — for example, /users?role=admin. Second, POST /users creates a new user. Send a JSON body with name, email, role, and password. If the email already exists, you'll get a 409 Conflict response. There's a full Postman collection in the docs folder you can import — it has examples for every endpoint. Feel free to ask if anything is unclear!"
+  },
+  "reading": {
+    "title": "📖 Reading — Why Good Documentation Matters",
+    "passage": "Documentation is often the most neglected part of software development. Developers see it as a chore, not as part of the product. But poor documentation creates enormous waste: developers spend hours reading old code to understand what it does, new team members take weeks to become productive, and simple integrations become frustrating puzzles.\n\nGood documentation answers four questions: What does this do? How do I use it? What are the expected inputs and outputs? What are the edge cases and error conditions?\n\nWrite documentation as you code, not after. After the fact, you will forget the subtle details — why you made a particular decision, what input formats are valid, what happens when the database is down.\n\nThe best documentation includes examples. A code example is worth 10 paragraphs of prose. Show your readers exactly what a request looks like and what response to expect.\n\nKeep documentation close to the code. Documentation that lives in a different place from the code will eventually drift out of sync and become misleading, which is worse than no documentation at all.",
+    "questions": [
+      "What four questions should good documentation answer?",
+      "Why should you write documentation as you code, not after?"
+    ],
+    "answers": [
+      "What does this do, how do I use it, what are the expected inputs and outputs, and what are the edge cases.",
+      "After the fact, you forget subtle details like why you made certain decisions and what edge cases you handled."
+    ],
+    "key_phrases": [
+      { "phrase": "Let me walk you through the API", "meaning": "Biarkan saya jelaskan API-nya" },
+      { "phrase": "The endpoint accepts... and returns...", "meaning": "Endpoint ini menerima... dan mengembalikan..." },
+      { "phrase": "Check the documentation for the full list of parameters", "meaning": "Periksa dokumentasi untuk daftar lengkap parameter" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Documentation Communication Phrases",
+    "items": [
+      { "context": "Referring to documentation", "phrase": "I've written up the API documentation — you can find it in the /docs folder.", "indonesian": "Saya sudah menulis dokumentasi API — kamu bisa menemukannya di folder /docs." },
+      { "context": "Explaining an endpoint", "phrase": "This endpoint accepts a JSON body with two required fields: name and email.", "indonesian": "Endpoint ini menerima JSON body dengan dua field wajib: name dan email." },
+      { "context": "Flagging a deprecation", "phrase": "Note: this endpoint is deprecated — please use the new v2 version instead.", "indonesian": "Catatan: endpoint ini sudah deprecated — mohon gunakan versi v2 yang baru." }
+    ]
+  }
+}

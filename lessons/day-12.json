@@ -1,0 +1,46 @@
+{
+  "day": 12,
+  "title": "Responding to Code Review Feedback",
+  "warmup": {
+    "title": "🔥 Review Response Vocabulary — Day 12",
+    "words": [
+      { "word": "addressed", "meaning": "Handled or resolved a comment or concern", "example": "I've addressed all the review comments — the PR is ready." },
+      { "word": "LGTM", "meaning": "Looks Good To Me — an informal approval of a pull request", "example": "LGTM! Great job — I'll approve this." },
+      { "word": "rebase", "meaning": "To update your branch with the latest changes from the main branch", "example": "Can you rebase your branch on main before we merge?" },
+      { "word": "squash", "meaning": "To combine multiple commits into a single commit", "example": "Please squash the fixup commits before merging." },
+      { "word": "push back", "meaning": "To disagree with a suggestion and explain why", "example": "I'm going to push back on this one — here's my reasoning." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Responding to Review Comments",
+    "scenario": "Replying to Code Review Comments on GitHub",
+    "context": "Your reviewer left three comments on your PR: (1) 'This logic is duplicated from UserService — can we reuse the existing function?' (2) 'Missing error handling if the database call fails.' (3) 'Nit: use const instead of let here since this value never changes.' You agree with comments 2 and 3, but for comment 1, you disagree — you believe the logic is similar but different enough to justify a separate function.",
+    "prompt": "Respond to all three review comments. For #1, politely push back and explain your reasoning. For #2 and #3, acknowledge and say you will fix it.",
+    "sample_answer": "Comment 1: Thanks for pointing this out! I actually looked at the UserService function before writing this, and while it looks similar on the surface, it handles a slightly different use case — it doesn't account for guest users, which is a requirement here. I think extracting it would cause the UserService to become more complex. Happy to discuss this further if you disagree!\n\nComment 2: Totally agree — I missed that. I'll add try-catch and proper error logging before requesting re-review.\n\nComment 3: Good catch, fixed! Changed let to const."
+  },
+  "reading": {
+    "title": "📖 Reading — How to Handle Code Review Disagreements",
+    "passage": "Receiving code review feedback can feel personal, especially when you have put a lot of effort into your implementation. But code review is a professional dialogue, not a judgment of your abilities.\n\nWhen you agree with feedback, say so clearly and make the change. 'Good point, fixed.' is perfectly acceptable.\n\nWhen you disagree, do not simply ignore the comment or make the change reluctantly. Instead, explain your reasoning respectfully. 'I considered this approach, but I went with the current implementation because...' shows that you thought carefully about your decision.\n\nIf you and your reviewer cannot agree, escalate to a third person or the tech lead. The goal is to find the best solution, not to win an argument.\n\nRemember: your reviewer is trying to help you. Even if a comment feels overly critical, assume good intent. A code review that improves your code is always valuable, even if the feedback stings a little.",
+    "questions": [
+      "What should you do when you disagree with a code review comment?",
+      "What should you do if you and your reviewer cannot reach an agreement?"
+    ],
+    "answers": [
+      "Explain your reasoning respectfully instead of ignoring the comment or making a reluctant change.",
+      "Escalate to a third person or tech lead to find the best solution."
+    ],
+    "key_phrases": [
+      { "phrase": "Good point, I've fixed this", "meaning": "Poin yang bagus, sudah saya perbaiki" },
+      { "phrase": "I'd like to push back on this — my reasoning is...", "meaning": "Saya ingin tidak setuju dengan ini — alasan saya adalah..." },
+      { "phrase": "I've addressed all the comments — ready for re-review", "meaning": "Saya sudah menanggapi semua komentar — siap untuk direview ulang" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Review Response Phrases",
+    "items": [
+      { "context": "Agreeing with feedback", "phrase": "You're right — I've updated the code accordingly. Thanks for catching that!", "indonesian": "Kamu benar — saya sudah memperbarui kodenya. Terima kasih sudah menangkapnya!" },
+      { "context": "Disagreeing respectfully", "phrase": "I see your point, but I went with this approach because... Happy to discuss further!", "indonesian": "Saya mengerti maksud kamu, tapi saya memilih pendekatan ini karena... Senang mendiskusikan lebih lanjut!" },
+      { "context": "Requesting re-review", "phrase": "I've addressed all the comments — the PR is ready for re-review.", "indonesian": "Saya sudah menangani semua komentar — PR siap untuk direview ulang." }
+    ]
+  }
+}

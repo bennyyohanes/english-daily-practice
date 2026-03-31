@@ -1,0 +1,46 @@
+{
+  "day": 20,
+  "title": "Scrum Ceremonies & Agile Communication",
+  "warmup": {
+    "title": "🔥 Agile Vocabulary — Day 20",
+    "words": [
+      { "word": "velocity", "meaning": "The amount of work a team completes per sprint, measured in story points", "example": "Our average velocity is 40 story points per sprint." },
+      { "word": "grooming", "meaning": "The process of reviewing and refining the product backlog", "example": "In Thursday's grooming session, we'll review the tickets for next sprint." },
+      { "word": "spike", "meaning": "A research task to explore a problem and reduce uncertainty before committing", "example": "Let's create a spike to investigate the best approach for the new caching layer." },
+      { "word": "definition of done", "meaning": "The agreed checklist that must be satisfied for a task to be considered complete", "example": "Our definition of done requires code review, testing, and documentation." },
+      { "word": "product owner", "meaning": "The person responsible for defining what the team should build and in what order", "example": "The product owner approved the new feature for this sprint." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Sprint Planning",
+    "scenario": "Sprint Planning Meeting",
+    "context": "Sprint planning is starting. The PM presents the top 5 tickets for the next sprint totaling 35 story points. Your team's average velocity is 40 points. She asks: 'Does the team feel comfortable committing to all 5 tickets for this sprint?' One ticket has unclear requirements. Another ticket depends on a third-party API that is not yet available.",
+    "prompt": "Respond as a developer in the sprint planning. Raise your concerns about the unclear ticket and the external dependency. Propose how to handle them.",
+    "sample_answer": "Thanks for presenting the sprint. I'm mostly comfortable with the plan, but I want to raise two concerns before we commit. First, Ticket 3 — the analytics dashboard — has acceptance criteria that mention 'real-time data' but we haven't defined what 'real-time' means exactly. Does that mean sub-second updates, or is every 5 minutes acceptable? The implementation is very different. Could we do a quick clarification session with the product owner this week before we commit to that one? Second, Ticket 5 depends on the Stripe webhook API that isn't ready yet. If there's any delay on their end, we'd be blocked. I'd suggest we either add a buffer or convert it to a spike to prepare the implementation so we're ready the moment the API is available. With those two addressed, I think we can confidently commit to the rest of the sprint."
+  },
+  "reading": {
+    "title": "📖 Reading — Effective Sprint Planning",
+    "passage": "Sprint planning sets the tone for the entire sprint. A good sprint planning session results in a clear, realistic commitment that the whole team believes in. A bad one results in an overcommitted team that ships half of what was planned.\n\nBefore committing to any ticket, every team member should feel confident they understand it. If a ticket is unclear, do not commit to it — either clarify it in the meeting or move it to a future sprint. 'We'll figure it out as we go' is a red flag.\n\nExternal dependencies are the biggest risk in sprint planning. If your work depends on another team, a third-party API, or a design that is not yet complete, flag it explicitly. Build in time for delays.\n\nAvoid the trap of optimistic planning. Teams consistently underestimate complexity and overestimate their velocity. A sprint where you complete 100% of committed work feels far better than a sprint where you complete 70% — even if the absolute output is the same.\n\nEnd every sprint planning session with a clear goal: a one-sentence description of the sprint's primary objective. This sprint goal keeps the team focused when priorities change mid-sprint.",
+    "questions": [
+      "What should you do if a ticket is unclear during sprint planning?",
+      "Why do teams consistently underestimate complexity?"
+    ],
+    "answers": [
+      "Either clarify it in the meeting or move it to a future sprint — do not commit to unclear work.",
+      "Because people naturally assume the best case and underestimate unknowns and dependencies."
+    ],
+    "key_phrases": [
+      { "phrase": "I'd like to flag a concern before we commit to this", "meaning": "Saya ingin menyampaikan kekhawatiran sebelum kita berkomitmen pada ini" },
+      { "phrase": "This ticket has an external dependency on...", "meaning": "Tiket ini memiliki ketergantungan eksternal pada..." },
+      { "phrase": "Can we clarify the acceptance criteria before we estimate this?", "meaning": "Bisakah kita mengklarifikasi kriteria penerimaan sebelum kita estimasi ini?" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Sprint Planning Phrases",
+    "items": [
+      { "context": "Raising a concern", "phrase": "Before we commit to this, I want to flag that the requirements for this ticket are unclear.", "indonesian": "Sebelum kita berkomitmen pada ini, saya ingin menyampaikan bahwa persyaratan untuk tiket ini tidak jelas." },
+      { "context": "Flagging a dependency", "phrase": "This ticket depends on the external API being ready — should we add a contingency?", "indonesian": "Tiket ini bergantung pada API eksternal yang siap — haruskah kita menambahkan rencana cadangan?" },
+      { "context": "Committing to the sprint", "phrase": "With those concerns addressed, I'm confident we can commit to this sprint.", "indonesian": "Dengan kekhawatiran tersebut diatasi, saya yakin kita bisa berkomitmen pada sprint ini." }
+    ]
+  }
+}

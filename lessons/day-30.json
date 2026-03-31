@@ -1,0 +1,46 @@
+{
+  "day": 30,
+  "title": "Advanced Communication — Putting It All Together",
+  "warmup": {
+    "title": "🔥 Advanced Professional Vocabulary — Day 30",
+    "words": [
+      { "word": "proactive", "meaning": "Acting before a problem occurs rather than reacting to it", "example": "A proactive developer identifies risks before they become blockers." },
+      { "word": "concise", "meaning": "Expressing things clearly with few words", "example": "Keep your updates concise — say what matters and stop." },
+      { "word": "credibility", "meaning": "The quality of being trusted and believed", "example": "You build credibility by consistently delivering what you promise." },
+      { "word": "influence", "meaning": "The ability to affect others' opinions or decisions without authority", "example": "Senior engineers lead through influence, not just through hierarchy." },
+      { "word": "stakeholder alignment", "meaning": "Ensuring all relevant parties agree on goals, priorities, and direction", "example": "We need stakeholder alignment before starting the major redesign." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — End-of-Quarter Presentation",
+    "scenario": "All-Hands Engineering Presentation",
+    "context": "You are presenting a 5-minute end-of-quarter summary to the entire company — engineering, product, sales, and executives. You need to cover: the key technical achievements this quarter, one major challenge and how the team solved it, and what the team is focused on next quarter. Your audience includes both technical and non-technical people.",
+    "prompt": "Give your end-of-quarter presentation. Make it compelling, clear, and appropriate for a mixed audience. Lead with impact, tell a story, and end with forward momentum.",
+    "sample_answer": "Good morning everyone! I'm going to give you a 5-minute highlight of what the engineering team accomplished this quarter — and I promise to keep it interesting. The headline result: our app is 3x faster than it was 90 days ago. Let me tell you the story behind that. At the start of the quarter, we had a problem: the user dashboard was taking 12 seconds to load. Customers were frustrated and our customer success team was spending hours on support tickets about it. We spent the first two weeks investigating — turned out there were two root causes: a missing database index and a coding pattern that was making 50 database queries instead of 1. The team fixed both. Dashboard load time is now under 1 second. Customer support tickets about performance dropped by 80%. That's the kind of improvement users actually notice. We also shipped 14 new features including the analytics dashboard and the PDF export that sales has been asking for — I know that one has already helped close at least two deals. Going into next quarter, our focus is reliability and scalability. We'll be upgrading our infrastructure to handle 10x our current traffic, which sets us up for the growth the sales team is driving. More on that in the roadmap session after this. Thanks for your time — the team has done outstanding work and I'm proud to be part of it. Any questions?"
+  },
+  "reading": {
+    "title": "📖 Reading — The Hallmarks of a Senior Communicator",
+    "passage": "After 30 days of practice, you have worked through the full spectrum of professional communication for developers — from daily stand-ups to high-stakes presentations. Let us close by reflecting on what separates excellent communicators from the rest.\n\nSenior communicators are proactive. They do not wait for someone to ask — they share updates before they are requested, flag risks before they become crises, and surface decisions before they become blockers.\n\nSenior communicators adapt to their audience. They speak differently to a junior developer than to a CEO. They know when to be technical and when to translate into business language. They can go deep and come back up to the surface in the same conversation.\n\nSenior communicators own their communication. They do not say 'I was not told about this.' They say 'I should have asked about this — let me clarify now.' They take responsibility for making sure information is complete and shared.\n\nFinally, senior communicators build trust through consistency. They say what they mean, deliver what they promise, and tell the truth even when it is uncomfortable. Over time, this consistency becomes credibility — and credibility becomes influence. That influence, more than any technical skill, is what defines a truly senior engineer.",
+    "questions": [
+      "What does it mean for a communicator to be 'proactive'?",
+      "How does consistency over time create influence for a senior engineer?"
+    ],
+    "answers": [
+      "Sharing updates before asked, flagging risks before they become crises, and surfacing decisions before they become blockers.",
+      "Consistency builds trust, trust builds credibility, and credibility gives you the influence to affect decisions and direction."
+    ],
+    "key_phrases": [
+      { "phrase": "The headline result this quarter is...", "meaning": "Hasil utama kuartal ini adalah..." },
+      { "phrase": "Let me tell you the story behind that", "meaning": "Biarkan saya ceritakan kisah di balik itu" },
+      { "phrase": "Going into next quarter, our focus is...", "meaning": "Memasuki kuartal berikutnya, fokus kita adalah..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Advanced Professional Phrases",
+    "items": [
+      { "context": "Opening a company-wide presentation", "phrase": "Good morning! I'll give you a 5-minute summary of what the engineering team accomplished this quarter.", "indonesian": "Selamat pagi! Saya akan memberikan ringkasan 5 menit tentang apa yang dicapai tim engineering kuartal ini." },
+      { "context": "Quantifying impact", "phrase": "The headline result: our app is 3x faster, and customer support tickets dropped by 80%.", "indonesian": "Hasil utamanya: aplikasi kita 3x lebih cepat, dan tiket dukungan pelanggan turun 80%." },
+      { "context": "Looking forward", "phrase": "Going into next quarter, we're focused on scalability to support the growth the sales team is driving.", "indonesian": "Memasuki kuartal berikutnya, kami fokus pada skalabilitas untuk mendukung pertumbuhan yang digerakkan tim penjualan." }
+    ]
+  }
+}

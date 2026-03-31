@@ -1,0 +1,46 @@
+{
+  "day": 25,
+  "title": "DevOps & Deployment Conversations",
+  "warmup": {
+    "title": "🔥 DevOps Vocabulary — Day 25",
+    "words": [
+      { "word": "CI/CD", "meaning": "Continuous Integration and Continuous Deployment — automating build, test, and deploy processes", "example": "Our CI/CD pipeline runs all tests automatically on every pull request." },
+      { "word": "pipeline", "meaning": "A series of automated steps executed in order to build, test, and deploy software", "example": "The deployment pipeline takes about 8 minutes from commit to production." },
+      { "word": "environment", "meaning": "A separate deployment context such as development, staging, or production", "example": "Always test in staging before deploying to the production environment." },
+      { "word": "containerize", "meaning": "To package an application and its dependencies into a container (like Docker)", "example": "We containerized the app so it runs the same way in every environment." },
+      { "word": "zero-downtime deploy", "meaning": "A deployment strategy that keeps the service available during updates", "example": "We use a rolling deployment strategy to achieve zero-downtime deploys." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Deployment Discussion",
+    "scenario": "Pre-Deployment Meeting",
+    "context": "Your team is about to deploy a major release to production. The release includes a database migration that will take about 5 minutes, a new API endpoint, and changes to the authentication flow. Your tech lead asks: 'What's the deployment plan? What could go wrong and what's our rollback strategy?'",
+    "prompt": "Present your deployment plan. Cover the sequence of steps, potential risks, and the rollback strategy.",
+    "sample_answer": "Here's the deployment plan. We'll deploy during the maintenance window at 11 PM. The sequence is: first, we run the database migration — this is backward compatible, it only adds new columns and doesn't rename or delete anything, so the current app will continue working during the migration. That should take about 5 minutes. Second, we deploy the new application code — we'll use a rolling deployment so traffic gradually shifts to the new version, which gives us zero downtime. Third, after the deployment, we'll monitor error rates and response times for 15 minutes before we call it done. Potential risks: if the migration takes longer than expected or if the new auth flow breaks for some users. Rollback strategy: the migration is backward compatible, so we can rollback the code without touching the database. If we need to rollback, we just deploy the previous Docker image — that's a 2-minute operation. I'll be on call for 2 hours post-deployment. Should we create a war room Slack channel in case something goes wrong?"
+  },
+  "reading": {
+    "title": "📖 Reading — Communicating About Deployments",
+    "passage": "A production deployment is a high-stakes event. Even with good automation, things can go wrong. How your team communicates before, during, and after a deployment determines how quickly you can respond to problems.\n\nBefore deploying, communicate the plan clearly: what is being deployed, when, who is responsible, what the potential risks are, and what the rollback plan is. Stakeholders should know what to expect, especially if there is any potential for user-visible downtime.\n\nDuring the deployment, provide real-time updates in a shared channel. 'Migration started,' 'Migration complete — 4 minutes,' 'Code deployment in progress,' 'Deployment complete — monitoring now.' These updates keep everyone informed and create a timeline you can refer to if something goes wrong.\n\nAfter the deployment, post a summary: what was deployed, whether everything went smoothly, any issues encountered and how they were resolved, and who to contact with questions.\n\nAlways celebrate successful deployments. Shipping software is a team achievement. A simple 'Deployment complete — everything looks good! Great job everyone 🎉' builds team morale and closes the loop.",
+    "questions": [
+      "What five things should you communicate before a deployment?",
+      "Why should you post real-time updates during a deployment?"
+    ],
+    "answers": [
+      "What is being deployed, when, who is responsible, potential risks, and the rollback plan.",
+      "To keep everyone informed and create a timeline to reference if something goes wrong."
+    ],
+    "key_phrases": [
+      { "phrase": "Here's the deployment plan and rollback strategy", "meaning": "Ini rencana deployment dan strategi rollback-nya" },
+      { "phrase": "The migration is backward compatible, so...", "meaning": "Migrasinya backward compatible, jadi..." },
+      { "phrase": "I'll be monitoring for... minutes after the deployment", "meaning": "Saya akan memantau selama... menit setelah deployment" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Deployment Communication Phrases",
+    "items": [
+      { "context": "Announcing a deployment", "phrase": "Deploying to production now — I'll update the channel when it's done.", "indonesian": "Sedang mendeploy ke production sekarang — saya akan update channel saat selesai." },
+      { "context": "Confirming success", "phrase": "Deployment complete! All systems look good — error rates are normal.", "indonesian": "Deployment selesai! Semua sistem terlihat baik — tingkat error normal." },
+      { "context": "Initiating a rollback", "phrase": "We're seeing elevated error rates — initiating a rollback to the previous version now.", "indonesian": "Kami melihat tingkat error yang tinggi — memulai rollback ke versi sebelumnya sekarang." }
+    ]
+  }
+}

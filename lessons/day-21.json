@@ -1,0 +1,46 @@
+{
+  "day": 21,
+  "title": "System Design Discussions",
+  "warmup": {
+    "title": "🔥 System Design Vocabulary — Day 21",
+    "words": [
+      { "word": "throughput", "meaning": "The amount of data or requests a system can process per unit of time", "example": "Our API handles 500 requests per second — that's our current throughput." },
+      { "word": "latency", "meaning": "The time delay between a request being sent and a response being received", "example": "The average latency of our search endpoint is 120 milliseconds." },
+      { "word": "bottleneck", "meaning": "The component that limits the overall performance of a system", "example": "The database is the bottleneck — all queries take over 2 seconds." },
+      { "word": "cache", "meaning": "A high-speed storage layer that stores frequently accessed data for faster retrieval", "example": "We added Redis cache to reduce database load by 70%." },
+      { "word": "load balancer", "meaning": "A system that distributes incoming requests across multiple servers", "example": "The load balancer routes traffic between our three backend servers." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — System Design Walkthrough",
+    "scenario": "Technical Design Review with the Team",
+    "context": "Your team needs to design a URL shortening service (like bit.ly). Your tech lead asks you to walk the team through your proposed design. You have designed a system with a REST API, a database to store mappings, a Redis cache for popular URLs, and an analytics component.",
+    "prompt": "Walk the team through your system design. Explain each component, how they interact, and why you made key design choices.",
+    "sample_answer": "Let me walk you through the design. At the top level, users interact with our REST API — there are two main endpoints: POST /shorten to create a short URL, and GET /{code} to redirect to the original URL. The core data store is a PostgreSQL database that maps short codes to long URLs, along with metadata like creation date and click count. The interesting part is the redirection flow, which needs to be fast. For every redirect, we first check a Redis cache. If the short code is in cache, we return the redirect instantly — that's sub-millisecond. On cache miss, we query the database and then populate the cache. For the short code generation, I'm using base62 encoding of an auto-incremented ID, which gives us over 56 billion unique codes with 6 characters. The analytics component is decoupled — we publish a click event to a queue asynchronously on each redirect, so analytics never slows down the redirect itself. Questions?"
+  },
+  "reading": {
+    "title": "📖 Reading — How to Communicate System Design",
+    "passage": "System design discussions are a core part of senior engineering work. Whether you're designing a new service, planning a migration, or reviewing an architecture proposal, the ability to communicate complex technical systems clearly is essential.\n\nAlways start with the problem and requirements before jumping to solutions. 'We need to handle 10,000 requests per second with 99.9% availability' defines the design constraints much better than 'we need a fast system.'\n\nUse diagrams whenever possible. A whiteboard sketch communicates a system architecture in seconds that would take paragraphs to describe. Even a rough ASCII diagram in a document helps readers visualize the flow.\n\nExplain the 'why' behind your decisions. 'We chose Redis over Memcached because we need sorted sets for the leaderboard feature' is informative. 'We chose Redis because it's popular' is not.\n\nAnticipate failure scenarios. A design that works under normal conditions but has no plan for what happens when the database goes down is incomplete. Show that you have thought about failure modes, even if you have not fully solved them.",
+    "questions": [
+      "What should you define before jumping to solutions in a system design discussion?",
+      "Why should you explain the 'why' behind your design decisions?"
+    ],
+    "answers": [
+      "The problem and requirements — constraints like required throughput, availability, and latency.",
+      "It shows your reasoning was intentional and helps others understand the context and evaluate the decision."
+    ],
+    "key_phrases": [
+      { "phrase": "Let me walk you through the design", "meaning": "Biarkan saya jelaskan desainnya" },
+      { "phrase": "The reason I chose... over... is because...", "meaning": "Alasan saya memilih... daripada... adalah karena..." },
+      { "phrase": "The key bottleneck in this design is...", "meaning": "Hambatan utama dalam desain ini adalah..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ System Design Discussion Phrases",
+    "items": [
+      { "context": "Starting a design walkthrough", "phrase": "Let me start with the high-level architecture and then drill down into the details.", "indonesian": "Biarkan saya mulai dengan arsitektur tingkat tinggi kemudian mendalami detailnya." },
+      { "context": "Explaining a design choice", "phrase": "I chose this approach because it gives us better scalability under high load.", "indonesian": "Saya memilih pendekatan ini karena memberikan skalabilitas yang lebih baik di bawah beban tinggi." },
+      { "context": "Discussing failure scenarios", "phrase": "If the cache goes down, the system falls back to the database — here's how that works.", "indonesian": "Jika cache mati, sistem akan kembali ke database — begini cara kerjanya." }
+    ]
+  }
+}

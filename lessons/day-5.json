@@ -1,0 +1,46 @@
+{
+  "day": 5,
+  "title": "Team Collaboration & Handoffs",
+  "warmup": {
+    "title": "🔥 Collaboration Vocabulary — Day 5",
+    "words": [
+      { "word": "handoff", "meaning": "Transferring a task or responsibility from one person to another", "example": "I'll do a handoff to Rina before I go on leave." },
+      { "word": "dependency", "meaning": "A task that must be completed before another can start", "example": "The frontend work is a dependency on the backend API." },
+      { "word": "sync", "meaning": "A short meeting to align on a topic; also to synchronize data", "example": "Let's have a quick sync to align on the API contract." },
+      { "word": "context", "meaning": "Background information needed to understand a situation", "example": "Let me give you some context on why we built it this way." },
+      { "word": "align", "meaning": "To make sure everyone has the same understanding or goal", "example": "We need to align on the design before starting development." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Handing Off a Task",
+    "scenario": "Handoff to a Teammate",
+    "context": "You are going on a 3-day leave starting tomorrow. You have been working on an authentication feature that is 60% complete. Your teammate Dito will take over. You need to brief him on: what is done, what still needs to be done, where the code is, and any known issues.",
+    "prompt": "Do the handoff to Dito. Give him all the context he needs to continue your work without getting confused or blocked.",
+    "sample_answer": "Hey Dito, thanks for covering for me! Let me walk you through where things stand. The login and registration endpoints are fully done — they're in the auth-service branch on GitHub. What still needs work is the password reset flow. I've started the backend controller but the email sending part isn't hooked up yet. The email service is in utils/mailer.js — just check the sendPasswordReset function. One known issue: the JWT token expiry is hardcoded right now at 24 hours; we should make it configurable, but that can wait. I'll leave detailed comments in the code. Feel free to ping me on Slack if you get stuck — I'll check messages in the evenings."
+  },
+  "reading": {
+    "title": "📖 Reading — The Art of a Good Handoff",
+    "passage": "A code handoff is one of the most underestimated communication tasks in software engineering. When done poorly, it wastes hours as the new developer tries to figure out what was built, why, and what still needs to be done.\n\nA good handoff covers five key areas: (1) What has been completed, (2) What is still in progress, (3) Where to find the relevant code and documentation, (4) Known bugs or technical debt, and (5) How to run and test the feature locally.\n\nAlways leave the code in a state where another developer can pick it up. This means meaningful commit messages, commented-out TODOs, and no uncommitted changes left on your local machine.\n\nThe best handoffs are proactive. Don't wait for your replacement to ask questions — anticipate what they will need and prepare it in advance. A five-minute written summary can save hours of confusion.",
+    "questions": [
+      "What five key areas should a good handoff cover?",
+      "What does it mean to leave code in a 'pickable' state?"
+    ],
+    "answers": [
+      "Completed work, in-progress work, where to find code/docs, known bugs or tech debt, and how to run/test locally.",
+      "Meaningful commit messages, commented TODOs, and no uncommitted changes on your local machine."
+    ],
+    "key_phrases": [
+      { "phrase": "Let me walk you through where things stand", "meaning": "Biarkan saya jelaskan kondisi saat ini" },
+      { "phrase": "Feel free to ping me if you get stuck", "meaning": "Jangan ragu hubungi saya kalau kamu terhambat" },
+      { "phrase": "Here's the context you need", "meaning": "Ini konteks yang kamu butuhkan" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Handoff & Collaboration Phrases",
+    "items": [
+      { "context": "Starting a handoff", "phrase": "Let me give you a quick rundown of where things are.", "indonesian": "Biarkan saya memberikan gambaran singkat tentang kondisi saat ini." },
+      { "context": "Pointing to the code", "phrase": "The relevant code is in the feature/auth branch — check the AuthController file.", "indonesian": "Kode yang relevan ada di branch feature/auth — cek file AuthController." },
+      { "context": "Flagging known issues", "phrase": "One thing to be aware of: there's a known issue with...", "indonesian": "Satu hal yang perlu diperhatikan: ada masalah yang diketahui dengan..." }
+    ]
+  }
+}

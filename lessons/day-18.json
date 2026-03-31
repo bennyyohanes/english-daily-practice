@@ -1,0 +1,46 @@
+{
+  "day": 18,
+  "title": "Sprint Retrospectives",
+  "warmup": {
+    "title": "🔥 Retrospective Vocabulary — Day 18",
+    "words": [
+      { "word": "retrospective", "meaning": "A meeting at the end of a sprint to reflect on what went well and what to improve", "example": "In today's retrospective, let's talk about the deployment issues we had." },
+      { "word": "action item", "meaning": "A specific task that comes out of a meeting that someone is responsible for", "example": "The action item from the retro is to add automated tests before every deploy." },
+      { "word": "friction", "meaning": "Something that slows down or makes work harder", "example": "The biggest friction point this sprint was our deployment process." },
+      { "word": "kudos", "meaning": "Public praise or recognition for good work", "example": "Kudos to Rina for staying late to fix the production bug." },
+      { "word": "process", "meaning": "A series of steps or methods used to accomplish a task", "example": "Our code review process needs improvement — reviews are taking too long." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Sprint Retrospective",
+    "scenario": "End-of-Sprint Retrospective Meeting",
+    "context": "Your sprint retrospective is happening now. The facilitator asks everyone to share: one thing that went well, one thing that could be improved, and one action item for the next sprint. This sprint had some good wins: you shipped the new dashboard on time. But there was friction: the QA process was slow and caused delays.",
+    "prompt": "Share your retrospective feedback clearly and constructively. Celebrate the win, describe the friction without blaming anyone, and propose a concrete action item.",
+    "sample_answer": "I'll share my three points. First, what went well: I'm really happy we shipped the new dashboard on time — that was a team effort and everyone pulled together during the last two days. Kudos especially to Dito who resolved that last-minute performance issue. For what could be improved: the QA phase took a lot longer than expected — we handed off to QA on Wednesday but didn't get sign-off until Friday afternoon. I think part of the issue is that we didn't have a clear testing checklist, so QA had to figure out what to test from scratch. My proposed action item: before we hand off any feature to QA next sprint, we agree on a testing checklist together with QA at the start of the sprint. That way, both sides know what's expected. What does everyone think?"
+  },
+  "reading": {
+    "title": "📖 Reading — How to Run a Blameless Retrospective",
+    "passage": "The retrospective is one of the most powerful tools in agile development — but only if run well. A bad retrospective is a complaint session that changes nothing. A good retrospective generates real, actionable improvements.\n\nThe key principle is blamelessness. The goal is to improve the system, not to blame individuals. When something went wrong, the question is not 'Who made this mistake?' but 'What process or condition allowed this mistake to happen?'\n\nA good retrospective format is Start-Stop-Continue: What should we start doing that we are not doing now? What should we stop doing because it is not helping? What should we continue because it is working well?\n\nEvery retrospective should produce specific, assigned action items. 'We should communicate better' is useless. 'Budi will create a Slack channel for deployment notifications by next Monday' is actionable.\n\nFollow up on action items from the previous retro at the start of each new retro. If action items are never checked, people stop believing the retrospective creates change.",
+    "questions": [
+      "What is the key principle of a blameless retrospective?",
+      "Why is 'we should communicate better' a bad action item?"
+    ],
+    "answers": [
+      "The goal is to improve the system and process, not to blame individuals for mistakes.",
+      "It is not specific, not assigned to anyone, and not measurable — it will never actually get done."
+    ],
+    "key_phrases": [
+      { "phrase": "What went well this sprint was...", "meaning": "Yang berjalan baik di sprint ini adalah..." },
+      { "phrase": "One area for improvement is...", "meaning": "Satu area yang perlu ditingkatkan adalah..." },
+      { "phrase": "My proposed action item is...", "meaning": "Tindakan yang saya usulkan adalah..." }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Retrospective Phrases",
+    "items": [
+      { "context": "Sharing a win", "phrase": "I want to give kudos to the team — we shipped on time despite the late changes.", "indonesian": "Saya ingin memberikan apresiasi kepada tim — kita berhasil kirim tepat waktu meskipun ada perubahan menit terakhir." },
+      { "context": "Raising an issue constructively", "phrase": "One thing I think we can improve is our handoff process — not to blame anyone, just the process.", "indonesian": "Satu hal yang saya rasa bisa kita tingkatkan adalah proses serah terima kita — bukan untuk menyalahkan siapapun, hanya prosesnya." },
+      { "context": "Proposing an action", "phrase": "I'd like to propose an action item: we create a deployment checklist by next week.", "indonesian": "Saya ingin mengusulkan tindakan: kita buat daftar periksa deployment pada minggu depan." }
+    ]
+  }
+}

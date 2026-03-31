@@ -1,0 +1,46 @@
+{
+  "day": 16,
+  "title": "Writing Jira Tickets",
+  "warmup": {
+    "title": "🔥 Jira & Ticket Vocabulary — Day 16",
+    "words": [
+      { "word": "user story", "meaning": "A feature description written from the user's perspective", "example": "As a user, I want to receive email notifications so I can stay informed." },
+      { "word": "acceptance criteria", "meaning": "The conditions that must be met for a ticket to be considered done", "example": "The acceptance criteria state that the button must be visible on mobile." },
+      { "word": "story points", "meaning": "A unit of measurement for estimating the complexity of a task", "example": "This ticket is 3 story points — it's moderate complexity." },
+      { "word": "epic", "meaning": "A large feature that is broken down into multiple smaller user stories", "example": "The checkout epic contains 12 separate user stories." },
+      { "word": "backlog", "meaning": "The list of all pending tasks and features not yet started", "example": "Let's groom the backlog before the next sprint planning." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Explaining a Jira Ticket",
+    "scenario": "Sprint Planning — Presenting a New Ticket",
+    "context": "During sprint planning, you are presenting a new feature request you wrote: users should be able to export their order history as a PDF. You need to explain the ticket to your team: what the feature does, why it is needed, and what the acceptance criteria are.",
+    "prompt": "Present this Jira ticket to your team. Explain the what, why, and how clearly so the team can understand, estimate, and assign it.",
+    "sample_answer": "This ticket is for an order history export feature. Here's the context: our customer success team has been getting a lot of requests from enterprise customers who need to export their orders for accounting purposes. The feature is: on the order history page, there's a new 'Export PDF' button. When clicked, it generates a PDF containing all orders from the last 30 days by default, but the user can also select a custom date range. The acceptance criteria are: (1) the PDF includes order ID, date, items, and total amount, (2) the button is accessible on both desktop and mobile, and (3) large exports (more than 1,000 orders) should be processed asynchronously with an email notification when ready. I've estimated this at 5 story points. Any questions before we start estimating as a team?"
+  },
+  "reading": {
+    "title": "📖 Reading — How to Write a Great User Story",
+    "passage": "A user story is the standard format for describing a feature from a user's perspective. The classic format is: 'As a [type of user], I want to [do something] so that [I get some benefit].'\n\nBut a user story title alone is not enough. Every ticket needs a clear description, clear acceptance criteria, and if possible, a visual mockup or design reference.\n\nAcceptance criteria are the most important part of any ticket. They are the checklist that tells you when the feature is truly done. Good acceptance criteria are specific and testable. 'The button should work' is not testable. 'Clicking the Export button generates a PDF within 5 seconds for datasets up to 1,000 records' is testable.\n\nWrite your tickets as if you will be on vacation when the developer picks them up. They should be able to understand exactly what to build, why it exists, and when it is complete — without asking you a single question.\n\nAvoid ambiguous words like 'fast', 'nice', or 'user-friendly' in acceptance criteria. These are subjective. Replace them with measurable criteria.",
+    "questions": [
+      "What is the classic format for writing a user story?",
+      "Why is 'the button should work' a bad acceptance criterion?"
+    ],
+    "answers": [
+      "As a [type of user], I want to [do something] so that [I get some benefit].",
+      "It is not specific or testable. A good criterion should be measurable and unambiguous."
+    ],
+    "key_phrases": [
+      { "phrase": "As a user, I want to... so that...", "meaning": "Sebagai pengguna, saya ingin... sehingga..." },
+      { "phrase": "The acceptance criteria for this are...", "meaning": "Kriteria penerimaan untuk ini adalah..." },
+      { "phrase": "This ticket is estimated at... story points", "meaning": "Tiket ini diestimasi... story points" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Jira Ticket Discussion Phrases",
+    "items": [
+      { "context": "Presenting a ticket", "phrase": "This ticket is for... — here's the context and what we need to build.", "indonesian": "Tiket ini untuk... — ini konteksnya dan apa yang perlu kita bangun." },
+      { "context": "Clarifying acceptance criteria", "phrase": "The ticket is done when all three acceptance criteria are met.", "indonesian": "Tiket ini selesai ketika semua tiga kriteria penerimaan terpenuhi." },
+      { "context": "Discussing scope", "phrase": "This is out of scope for this ticket — let's create a separate story for that.", "indonesian": "Ini di luar ruang lingkup tiket ini — ayo buat cerita terpisah untuk itu." }
+    ]
+  }
+}

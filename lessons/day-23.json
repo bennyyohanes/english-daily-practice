@@ -1,0 +1,46 @@
+{
+  "day": 23,
+  "title": "Security Discussions",
+  "warmup": {
+    "title": "🔥 Security Vocabulary — Day 23",
+    "words": [
+      { "word": "vulnerability", "meaning": "A weakness in code or infrastructure that can be exploited by an attacker", "example": "A SQL injection vulnerability was found in the search endpoint." },
+      { "word": "authentication", "meaning": "The process of verifying who a user is", "example": "We use JWT tokens for authentication." },
+      { "word": "authorization", "meaning": "The process of verifying what a user is allowed to do", "example": "Even after authentication, authorization checks prevent regular users from accessing admin routes." },
+      { "word": "sanitize", "meaning": "To clean user input to prevent malicious data from being processed", "example": "Always sanitize form inputs to prevent XSS attacks." },
+      { "word": "least privilege", "meaning": "The security principle of giving users or systems only the permissions they need", "example": "Following least privilege, the API service only has read access to the database." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Reporting a Security Vulnerability",
+    "scenario": "Urgent Meeting — Security Issue Found",
+    "context": "During a code review, you discovered a serious security issue: the user profile API endpoint returns the full user object including the hashed password, API keys, and other sensitive fields. Any authenticated user can view another user's data by changing the user ID in the URL. This is an IDOR (Insecure Direct Object Reference) vulnerability.",
+    "prompt": "Report this security vulnerability to your tech lead. Explain what the vulnerability is, why it is serious, and propose a fix.",
+    "sample_answer": "I need to flag a security issue I found in the user profile endpoint — it's fairly serious. The GET /api/users/{id} endpoint returns the full user object, including the hashed password and API keys. More critically, there's no authorization check — any authenticated user can request any user ID and get their data. For example, if I'm logged in as user 1, I can call /api/users/2 and see user 2's full profile, including their API keys. This is an IDOR vulnerability. The fix has two parts: first, we need to add an authorization check so users can only access their own profile, or explicitly granted profiles in the case of admins. Second, the API response should be filtered to only return safe fields — we should never return password hashes or API keys in a public endpoint. I'd recommend treating this as a P0 and fixing it before the end of today. The endpoint is publicly accessible to all logged-in users right now."
+  },
+  "reading": {
+    "title": "📖 Reading — Security as a Shared Responsibility",
+    "passage": "Security is not just the responsibility of a dedicated security team. Every developer who writes code that handles user data, processes payments, or controls access to resources has a responsibility to write secure code.\n\nThe most common security mistakes are not sophisticated — they are basic errors that could be caught with code review and basic security awareness. SQL injection happens when user input is not sanitized. XSS happens when user-generated content is rendered without escaping. IDOR happens when access control checks are missing.\n\nWhen you find a security vulnerability, report it immediately and privately — not in a public Slack channel where it could be read by the wrong person. Severity determines urgency: a vulnerability that exposes user data in production is a P0 that overrides all other work.\n\nWhen discussing security issues with non-technical stakeholders, focus on the business and user impact, not the technical details. 'An attacker can steal any customer's payment details' is more alarming and appropriate than 'we have an unsanitized SQL input.'",
+    "questions": [
+      "What are three common security mistakes that developers make?",
+      "How should you report a security vulnerability when you find one?"
+    ],
+    "answers": [
+      "SQL injection from unsanitized inputs, XSS from unescaped user content, and IDOR from missing access control checks.",
+      "Report it immediately and privately — not in a public channel. Treat high-severity issues as P0."
+    ],
+    "key_phrases": [
+      { "phrase": "I found a security vulnerability — it's fairly serious", "meaning": "Saya menemukan kerentanan keamanan — ini cukup serius" },
+      { "phrase": "The impact is that any user can access...", "meaning": "Dampaknya adalah bahwa setiap pengguna dapat mengakses..." },
+      { "phrase": "The fix requires adding an authorization check", "meaning": "Perbaikannya memerlukan penambahan pemeriksaan otorisasi" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Security Discussion Phrases",
+    "items": [
+      { "context": "Flagging a security issue", "phrase": "I need to flag a security vulnerability — I'd prefer to discuss this privately rather than in the public channel.", "indonesian": "Saya perlu melaporkan kerentanan keamanan — saya lebih suka mendiskusikan ini secara pribadi daripada di channel publik." },
+      { "context": "Explaining the risk", "phrase": "The risk is that an attacker could access sensitive user data without authorization.", "indonesian": "Risikonya adalah penyerang dapat mengakses data pengguna sensitif tanpa otorisasi." },
+      { "context": "Proposing a fix", "phrase": "The fix is straightforward: add an authorization check to verify the requester owns this resource.", "indonesian": "Perbaikannya mudah: tambahkan pemeriksaan otorisasi untuk memverifikasi bahwa pemohon memiliki sumber daya ini." }
+    ]
+  }
+}

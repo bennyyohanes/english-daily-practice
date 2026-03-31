@@ -1,0 +1,46 @@
+{
+  "day": 22,
+  "title": "Database & Performance Discussions",
+  "warmup": {
+    "title": "🔥 Database Performance Vocabulary — Day 22",
+    "words": [
+      { "word": "index", "meaning": "A database structure that speeds up data retrieval at the cost of storage", "example": "Adding an index on the email column reduced query time from 2s to 5ms." },
+      { "word": "query optimization", "meaning": "The process of rewriting queries to run faster and use fewer resources", "example": "After query optimization, the report generation dropped from 8 seconds to 0.3 seconds." },
+      { "word": "N+1 problem", "meaning": "A performance issue where fetching a list of items requires one query per item instead of one total query", "example": "We had an N+1 problem — for 100 orders, we were making 101 database queries." },
+      { "word": "sharding", "meaning": "Splitting a large database into smaller, distributed pieces across multiple servers", "example": "We started sharding our user database when we hit 100 million records." },
+      { "word": "EXPLAIN", "meaning": "A database command that shows how a query will be executed", "example": "Run EXPLAIN on that query to see if it's doing a full table scan." }
+    ]
+  },
+  "speaking": {
+    "title": "💬 Speaking — Presenting a Performance Investigation",
+    "scenario": "Technical Meeting — Performance Issue Investigation",
+    "context": "Your team's admin dashboard is taking 12 seconds to load. Your tech lead asks you to investigate and present your findings. You discovered: (1) The main query was doing a full table scan on 5 million rows because there was no index on the status column. (2) There was an N+1 issue where for each of 50 orders, the code fetched the user info separately.",
+    "prompt": "Present your findings to the team. Explain the root cause of each issue, the impact, and your proposed solutions.",
+    "sample_answer": "I investigated the dashboard performance issue and found two root causes. The first issue is a missing database index. The main query filters orders by status, but there's no index on the status column. This means every time the dashboard loads, the database scans all 5 million orders from scratch. I ran EXPLAIN on the query and confirmed it's doing a full table scan. Adding a composite index on status and created_at should reduce this query from about 8 seconds to under 100 milliseconds. The second issue is an N+1 query problem. The code fetches 50 orders and then, for each order, makes a separate database call to get the user's name. That's 51 queries for a single page load. I can fix this by rewriting the query to use a JOIN, which will fetch all the data in a single query. My estimate is that fixing both issues will bring the dashboard load time from 12 seconds to under 1 second. I can start on the index today — it's a quick win. The N+1 fix is a bit more involved but should be done by tomorrow."
+  },
+  "reading": {
+    "title": "📖 Reading — Talking About Performance Bottlenecks",
+    "passage": "Performance issues are one of the most common technical challenges a developer faces. More importantly, communicating about performance issues effectively is a critical professional skill.\n\nWhen presenting a performance problem, always lead with impact. 'The dashboard takes 12 seconds to load' is more compelling than 'we found a slow query.' Impact motivates the team to fix the problem.\n\nThen explain the root cause with evidence. Do not guess — measure. Use profiling tools, query execution plans, and logs to identify the actual bottleneck. 'I believe it might be the database' is an opinion. 'The EXPLAIN output shows a full table scan on the orders table, which takes 8 seconds' is a finding.\n\nFinally, propose a specific solution with an expected impact. 'Adding an index should reduce query time by 95%' is much more useful than 'we should optimize the database.'\n\nAlways measure before and after your fix to confirm the improvement. Without measurement, you cannot prove your fix worked. With measurement, you have a concrete success story to share with the team.",
+    "questions": [
+      "What should you lead with when presenting a performance problem?",
+      "Why is measuring performance before and after a fix important?"
+    ],
+    "answers": [
+      "Lead with impact — how the slow performance affects users or the business.",
+      "Without measurement you cannot prove the fix worked. With it you have a concrete result to share."
+    ],
+    "key_phrases": [
+      { "phrase": "I identified two root causes for the performance issue", "meaning": "Saya mengidentifikasi dua penyebab utama masalah performa" },
+      { "phrase": "The fix should reduce load time by...", "meaning": "Perbaikan ini seharusnya mengurangi waktu loading sebesar..." },
+      { "phrase": "I measured before and after — here are the results", "meaning": "Saya mengukur sebelum dan sesudah — ini hasilnya" }
+    ]
+  },
+  "phrases": {
+    "title": "🛠️ Performance Discussion Phrases",
+    "items": [
+      { "context": "Presenting a finding", "phrase": "After profiling the code, I found the bottleneck is in the database query — here's the evidence.", "indonesian": "Setelah mem-profiling kode, saya menemukan hambatannya ada di query database — ini buktinya." },
+      { "context": "Proposing a solution", "phrase": "Adding an index on this column should reduce query time from 8 seconds to under 100ms.", "indonesian": "Menambahkan index pada kolom ini seharusnya mengurangi waktu query dari 8 detik menjadi di bawah 100ms." },
+      { "context": "Confirming the improvement", "phrase": "I tested the fix in staging — load time dropped from 12 seconds to 0.8 seconds.", "indonesian": "Saya menguji perbaikannya di staging — waktu loading turun dari 12 detik menjadi 0,8 detik." }
+    ]
+  }
+}

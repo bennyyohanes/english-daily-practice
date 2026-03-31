@@ -1,0 +1,11 @@
+{
+  "name": "english-daily-practice",
+  "version": "1.0.0",
+  "description": "Daily English practice for programmers",
+  "scripts": {
+    "send-email": "node scripts/send-email.js"
+  },
+  "dependencies": {
+    "resend": "^3.0.0"
+  }
+}
